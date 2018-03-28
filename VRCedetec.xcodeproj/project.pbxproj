@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE4D85E2203962BF00DFC9A1 /* ExploreFloorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D85E1203962BF00DFC9A1 /* ExploreFloorsViewController.swift */; };
+		CE4D85E4203962D000DFC9A1 /* ExploreAreasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D85E3203962D000DFC9A1 /* ExploreAreasViewController.swift */; };
+		CE4D85E8203A6BFF00DFC9A1 /* VRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D85E7203A6BFF00DFC9A1 /* VRViewController.swift */; };
+		CE4D85EA203A6F3E00DFC9A1 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D85E9203A6F3E00DFC9A1 /* PreviewViewController.swift */; };
+		CE6E2B8B203B659F00693AE1 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E2B8A203B659F00693AE1 /* AreaViewController.swift */; };
+		CE7503E52048952800D7E099 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503C92048951A00D7E099 /* settings.png */; };
+		CE7503E62048952800D7E099 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503CA2048951A00D7E099 /* speaker.png */; };
+		CE7503E72048952800D7E099 /* View2.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503CB2048951A00D7E099 /* View2.png */; };
+		CE7503E82048952800D7E099 /* View3.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503CC2048951A00D7E099 /* View3.png */; };
+		CE7503E92048952800D7E099 /* placeholderSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503CD2048951A00D7E099 /* placeholderSettings.png */; };
+		CE7503EA2048952800D7E099 /* Areas.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503CE2048951B00D7E099 /* Areas.png */; };
+		CE7503EB2048952800D7E099 /* magnifier.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503CF2048951B00D7E099 /* magnifier.png */; };
+		CE7503EC2048952800D7E099 /* CEDETECVECTORIZADO.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503D02048951B00D7E099 /* CEDETECVECTORIZADO.png */; };
+		CE7503ED2048952800D7E099 /* TecLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503D12048951B00D7E099 /* TecLogo.png */; };
+		CE7503EE2048952800D7E099 /* GoogleMaps.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503D22048951C00D7E099 /* GoogleMaps.png */; };
+		CE7503EF2048952800D7E099 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503D32048951C00D7E099 /* facebook.png */; };
+		CE7503F02048952800D7E099 /* placeholderIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503D42048951D00D7E099 /* placeholderIcon.png */; };
+		CE7503F12048952800D7E099 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503D52048951D00D7E099 /* star.png */; };
+		CE7503F22048952800D7E099 /* cedetec.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE7503D62048951E00D7E099 /* cedetec.jpg */; };
+		CE7503F32048952800D7E099 /* information.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503D72048951E00D7E099 /* information.png */; };
+		CE7503F42048952800D7E099 /* View4.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503D82048951F00D7E099 /* View4.png */; };
+		CE7503F52048952800D7E099 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503D92048951F00D7E099 /* placeholder.png */; };
+		CE7503F62048952800D7E099 /* 360Degrees.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503DA2048951F00D7E099 /* 360Degrees.png */; };
+		CE7503F72048952800D7E099 /* AreaBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503DB2048952000D7E099 /* AreaBtn.png */; };
+		CE7503F82048952800D7E099 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503DC2048952100D7E099 /* back.png */; };
+		CE7503F92048952800D7E099 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503DD2048952100D7E099 /* twitter.png */; };
+		CE7503FA2048952800D7E099 /* PisosBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503DE2048952200D7E099 /* PisosBtn.png */; };
+		CE7503FB2048952800D7E099 /* LoadScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503DF2048952300D7E099 /* LoadScreen.png */; };
+		CE7503FC2048952800D7E099 /* mapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503E02048952400D7E099 /* mapIcon.png */; };
+		CE7503FD2048952800D7E099 /* View1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503E12048952500D7E099 /* View1.png */; };
+		CE7503FE2048952800D7E099 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503E22048952500D7E099 /* pin.png */; };
+		CE7503FF2048952800D7E099 /* VRCedetecHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503E32048952600D7E099 /* VRCedetecHeader.png */; };
+		CE7504002048952800D7E099 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503E42048952700D7E099 /* search.png */; };
+		CEB4BE70203931E200217A0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BE6F203931E200217A0C /* AppDelegate.swift */; };
+		CEB4BE72203931E200217A0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BE71203931E200217A0C /* ViewController.swift */; };
+		CEB4BE75203931E200217A0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB4BE73203931E200217A0C /* Main.storyboard */; };
+		CEB4BE77203931E200217A0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB4BE76203931E200217A0C /* Assets.xcassets */; };
+		CEB4BE7A203931E200217A0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB4BE78203931E200217A0C /* LaunchScreen.storyboard */; };
+		CEB4BE84203936C700217A0C /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEB4BE83203936C700217A0C /* Lato-Regular.ttf */; };
+		CEB4BE8B20393CB600217A0C /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BE8A20393CB600217A0C /* DesignableButton.swift */; };
+		CEB4BEA320394A9A00217A0C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BEA220394A9A00217A0C /* SearchViewController.swift */; };
+		CEB4BEA520394AB900217A0C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BEA420394AB900217A0C /* MapViewController.swift */; };
+		CEB4BEA720394AD900217A0C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BEA620394AD900217A0C /* AboutViewController.swift */; };
+		CEB4BEA920394AF900217A0C /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BEA820394AF900217A0C /* ExploreViewController.swift */; };
+		CEB4BEAB20394B8F00217A0C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BEAA20394B8F00217A0C /* SettingsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE4D85E1203962BF00DFC9A1 /* ExploreFloorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFloorsViewController.swift; sourceTree = "<group>"; };
+		CE4D85E3203962D000DFC9A1 /* ExploreAreasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreAreasViewController.swift; sourceTree = "<group>"; };
+		CE4D85E7203A6BFF00DFC9A1 /* VRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRViewController.swift; sourceTree = "<group>"; };
+		CE4D85E9203A6F3E00DFC9A1 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		CE6E2B8A203B659F00693AE1 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
+		CE7503C92048951A00D7E099 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		CE7503CA2048951A00D7E099 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
+		CE7503CB2048951A00D7E099 /* View2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View2.png; sourceTree = "<group>"; };
+		CE7503CC2048951A00D7E099 /* View3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View3.png; sourceTree = "<group>"; };
+		CE7503CD2048951A00D7E099 /* placeholderSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholderSettings.png; sourceTree = "<group>"; };
+		CE7503CE2048951B00D7E099 /* Areas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Areas.png; sourceTree = "<group>"; };
+		CE7503CF2048951B00D7E099 /* magnifier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magnifier.png; sourceTree = "<group>"; };
+		CE7503D02048951B00D7E099 /* CEDETECVECTORIZADO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CEDETECVECTORIZADO.png; sourceTree = "<group>"; };
+		CE7503D12048951B00D7E099 /* TecLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TecLogo.png; sourceTree = "<group>"; };
+		CE7503D22048951C00D7E099 /* GoogleMaps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GoogleMaps.png; sourceTree = "<group>"; };
+		CE7503D32048951C00D7E099 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		CE7503D42048951D00D7E099 /* placeholderIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholderIcon.png; sourceTree = "<group>"; };
+		CE7503D52048951D00D7E099 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		CE7503D62048951E00D7E099 /* cedetec.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cedetec.jpg; sourceTree = "<group>"; };
+		CE7503D72048951E00D7E099 /* information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = information.png; sourceTree = "<group>"; };
+		CE7503D82048951F00D7E099 /* View4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View4.png; sourceTree = "<group>"; };
+		CE7503D92048951F00D7E099 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		CE7503DA2048951F00D7E099 /* 360Degrees.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 360Degrees.png; sourceTree = "<group>"; };
+		CE7503DB2048952000D7E099 /* AreaBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AreaBtn.png; sourceTree = "<group>"; };
+		CE7503DC2048952100D7E099 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		CE7503DD2048952100D7E099 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		CE7503DE2048952200D7E099 /* PisosBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PisosBtn.png; sourceTree = "<group>"; };
+		CE7503DF2048952300D7E099 /* LoadScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoadScreen.png; sourceTree = "<group>"; };
+		CE7503E02048952400D7E099 /* mapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapIcon.png; sourceTree = "<group>"; };
+		CE7503E12048952500D7E099 /* View1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View1.png; sourceTree = "<group>"; };
+		CE7503E22048952500D7E099 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		CE7503E32048952600D7E099 /* VRCedetecHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VRCedetecHeader.png; sourceTree = "<group>"; };
+		CE7503E42048952700D7E099 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		CEB4BE6C203931E200217A0C /* VRCedetec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRCedetec.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB4BE6F203931E200217A0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEB4BE71203931E200217A0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEB4BE74203931E200217A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEB4BE76203931E200217A0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEB4BE79203931E200217A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEB4BE7B203931E200217A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB4BE83203936C700217A0C /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		CEB4BE8A20393CB600217A0C /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		CEB4BEA220394A9A00217A0C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CEB4BEA420394AB900217A0C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CEB4BEA620394AD900217A0C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		CEB4BEA820394AF900217A0C /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		CEB4BEAA20394B8F00217A0C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEB4BE69203931E200217A0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEB4BE63203931E200217A0C = {
+			isa = PBXGroup;
+			children = (
+				CEB4BE6E203931E200217A0C /* VRCedetec */,
+				CEB4BE6D203931E200217A0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEB4BE6D203931E200217A0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEB4BE6C203931E200217A0C /* VRCedetec.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEB4BE6E203931E200217A0C /* VRCedetec */ = {
+			isa = PBXGroup;
+			children = (
+				CEB4BE85203937DF00217A0C /* assets */,
+				CEB4BE82203936B700217A0C /* fonts */,
+				CEB4BE6F203931E200217A0C /* AppDelegate.swift */,
+				CEB4BE71203931E200217A0C /* ViewController.swift */,
+				CEB4BE73203931E200217A0C /* Main.storyboard */,
+				CEB4BE76203931E200217A0C /* Assets.xcassets */,
+				CEB4BE78203931E200217A0C /* LaunchScreen.storyboard */,
+				CEB4BE7B203931E200217A0C /* Info.plist */,
+				CEB4BE8A20393CB600217A0C /* DesignableButton.swift */,
+				CEB4BEA220394A9A00217A0C /* SearchViewController.swift */,
+				CEB4BEA420394AB900217A0C /* MapViewController.swift */,
+				CEB4BEA620394AD900217A0C /* AboutViewController.swift */,
+				CEB4BEA820394AF900217A0C /* ExploreViewController.swift */,
+				CEB4BEAA20394B8F00217A0C /* SettingsViewController.swift */,
+				CE4D85E1203962BF00DFC9A1 /* ExploreFloorsViewController.swift */,
+				CE4D85E3203962D000DFC9A1 /* ExploreAreasViewController.swift */,
+				CE4D85E7203A6BFF00DFC9A1 /* VRViewController.swift */,
+				CE4D85E9203A6F3E00DFC9A1 /* PreviewViewController.swift */,
+				CE6E2B8A203B659F00693AE1 /* AreaViewController.swift */,
+			);
+			path = VRCedetec;
+			sourceTree = "<group>";
+		};
+		CEB4BE82203936B700217A0C /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CEB4BE83203936C700217A0C /* Lato-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		CEB4BE85203937DF00217A0C /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				CE7503DA2048951F00D7E099 /* 360Degrees.png */,
+				CE7503DB2048952000D7E099 /* AreaBtn.png */,
+				CE7503CE2048951B00D7E099 /* Areas.png */,
+				CE7503DC2048952100D7E099 /* back.png */,
+				CE7503D62048951E00D7E099 /* cedetec.jpg */,
+				CE7503D02048951B00D7E099 /* CEDETECVECTORIZADO.png */,
+				CE7503D32048951C00D7E099 /* facebook.png */,
+				CE7503D22048951C00D7E099 /* GoogleMaps.png */,
+				CE7503D72048951E00D7E099 /* information.png */,
+				CE7503DF2048952300D7E099 /* LoadScreen.png */,
+				CE7503CF2048951B00D7E099 /* magnifier.png */,
+				CE7503E02048952400D7E099 /* mapIcon.png */,
+				CE7503E22048952500D7E099 /* pin.png */,
+				CE7503DE2048952200D7E099 /* PisosBtn.png */,
+				CE7503D92048951F00D7E099 /* placeholder.png */,
+				CE7503D42048951D00D7E099 /* placeholderIcon.png */,
+				CE7503CD2048951A00D7E099 /* placeholderSettings.png */,
+				CE7503E42048952700D7E099 /* search.png */,
+				CE7503C92048951A00D7E099 /* settings.png */,
+				CE7503CA2048951A00D7E099 /* speaker.png */,
+				CE7503D52048951D00D7E099 /* star.png */,
+				CE7503D12048951B00D7E099 /* TecLogo.png */,
+				CE7503DD2048952100D7E099 /* twitter.png */,
+				CE7503E12048952500D7E099 /* View1.png */,
+				CE7503CB2048951A00D7E099 /* View2.png */,
+				CE7503CC2048951A00D7E099 /* View3.png */,
+				CE7503D82048951F00D7E099 /* View4.png */,
+				CE7503E32048952600D7E099 /* VRCedetecHeader.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEB4BE6B203931E200217A0C /* VRCedetec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB4BE7E203931E200217A0C /* Build configuration list for PBXNativeTarget "VRCedetec" */;
+			buildPhases = (
+				CEB4BE68203931E200217A0C /* Sources */,
+				CEB4BE69203931E200217A0C /* Frameworks */,
+				CEB4BE6A203931E200217A0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VRCedetec;
+			productName = VRCedetec;
+			productReference = CEB4BE6C203931E200217A0C /* VRCedetec.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEB4BE64203931E200217A0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Martín Figueroa Padilla";
+				TargetAttributes = {
+					CEB4BE6B203931E200217A0C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CEB4BE67203931E200217A0C /* Build configuration list for PBXProject "VRCedetec" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEB4BE63203931E200217A0C;
+			productRefGroup = CEB4BE6D203931E200217A0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEB4BE6B203931E200217A0C /* VRCedetec */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEB4BE6A203931E200217A0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7503EC2048952800D7E099 /* CEDETECVECTORIZADO.png in Resources */,
+				CE7503FC2048952800D7E099 /* mapIcon.png in Resources */,
+				CEB4BE7A203931E200217A0C /* LaunchScreen.storyboard in Resources */,
+				CE7503FE2048952800D7E099 /* pin.png in Resources */,
+				CE7503F02048952800D7E099 /* placeholderIcon.png in Resources */,
+				CE7503F42048952800D7E099 /* View4.png in Resources */,
+				CE7503F52048952800D7E099 /* placeholder.png in Resources */,
+				CE7503F22048952800D7E099 /* cedetec.jpg in Resources */,
+				CE7503E62048952800D7E099 /* speaker.png in Resources */,
+				CE7503F32048952800D7E099 /* information.png in Resources */,
+				CE7503EB2048952800D7E099 /* magnifier.png in Resources */,
+				CE7503E82048952800D7E099 /* View3.png in Resources */,
+				CE7503E52048952800D7E099 /* settings.png in Resources */,
+				CE7503F72048952800D7E099 /* AreaBtn.png in Resources */,
+				CE7503F92048952800D7E099 /* twitter.png in Resources */,
+				CEB4BE77203931E200217A0C /* Assets.xcassets in Resources */,
+				CE7503EF2048952800D7E099 /* facebook.png in Resources */,
+				CE7503F12048952800D7E099 /* star.png in Resources */,
+				CE7503E72048952800D7E099 /* View2.png in Resources */,
+				CE7504002048952800D7E099 /* search.png in Resources */,
+				CE7503FA2048952800D7E099 /* PisosBtn.png in Resources */,
+				CE7503F62048952800D7E099 /* 360Degrees.png in Resources */,
+				CE7503E92048952800D7E099 /* placeholderSettings.png in Resources */,
+				CE7503FB2048952800D7E099 /* LoadScreen.png in Resources */,
+				CEB4BE75203931E200217A0C /* Main.storyboard in Resources */,
+				CE7503FF2048952800D7E099 /* VRCedetecHeader.png in Resources */,
+				CE7503EA2048952800D7E099 /* Areas.png in Resources */,
+				CE7503F82048952800D7E099 /* back.png in Resources */,
+				CE7503ED2048952800D7E099 /* TecLogo.png in Resources */,
+				CEB4BE84203936C700217A0C /* Lato-Regular.ttf in Resources */,
+				CE7503EE2048952800D7E099 /* GoogleMaps.png in Resources */,
+				CE7503FD2048952800D7E099 /* View1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEB4BE68203931E200217A0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB4BEA720394AD900217A0C /* AboutViewController.swift in Sources */,
+				CEB4BE72203931E200217A0C /* ViewController.swift in Sources */,
+				CEB4BE70203931E200217A0C /* AppDelegate.swift in Sources */,
+				CEB4BEA320394A9A00217A0C /* SearchViewController.swift in Sources */,
+				CE6E2B8B203B659F00693AE1 /* AreaViewController.swift in Sources */,
+				CEB4BEA520394AB900217A0C /* MapViewController.swift in Sources */,
+				CEB4BEA920394AF900217A0C /* ExploreViewController.swift in Sources */,
+				CEB4BE8B20393CB600217A0C /* DesignableButton.swift in Sources */,
+				CE4D85E2203962BF00DFC9A1 /* ExploreFloorsViewController.swift in Sources */,
+				CE4D85E8203A6BFF00DFC9A1 /* VRViewController.swift in Sources */,
+				CE4D85E4203962D000DFC9A1 /* ExploreAreasViewController.swift in Sources */,
+				CEB4BEAB20394B8F00217A0C /* SettingsViewController.swift in Sources */,
+				CE4D85EA203A6F3E00DFC9A1 /* PreviewViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEB4BE73203931E200217A0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEB4BE74203931E200217A0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEB4BE78203931E200217A0C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEB4BE79203931E200217A0C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEB4BE7C203931E200217A0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEB4BE7D203931E200217A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEB4BE7F203931E200217A0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S9XL8G73H;
+				INFOPLIST_FILE = VRCedetec/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zenith.VRCedetec;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEB4BE80203931E200217A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6S9XL8G73H;
+				INFOPLIST_FILE = VRCedetec/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zenith.VRCedetec;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEB4BE67203931E200217A0C /* Build configuration list for PBXProject "VRCedetec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB4BE7C203931E200217A0C /* Debug */,
+				CEB4BE7D203931E200217A0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB4BE7E203931E200217A0C /* Build configuration list for PBXNativeTarget "VRCedetec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB4BE7F203931E200217A0C /* Debug */,
+				CEB4BE80203931E200217A0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEB4BE64203931E200217A0C /* Project object */;
+}
