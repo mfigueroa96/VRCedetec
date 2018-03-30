@@ -562,7 +562,7 @@ José M. Molina Espinosa</string>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C97-GX-g6u">
                                 <rect key="frame" x="16" y="79" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="diseño.png"/>
+                                <state key="normal" title="Button" image="arquitectura.png"/>
                                 <connections>
                                     <segue destination="Cjc-AT-mWC" kind="show" id="csa-xP-2Ek"/>
                                 </connections>
@@ -578,7 +578,7 @@ José M. Molina Espinosa</string>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KT0-bB-KKa">
                                 <rect key="frame" x="16" y="253" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="diseño.png"/>
+                                <state key="normal" title="Button" image="ti.png"/>
                                 <connections>
                                     <segue destination="Cjc-AT-mWC" kind="show" id="B6d-wd-5ud"/>
                                 </connections>
@@ -586,7 +586,7 @@ José M. Molina Espinosa</string>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xH8-Qb-R8W">
                                 <rect key="frame" x="199" y="253" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="diseño.png"/>
+                                <state key="normal" title="Button" image="mecanica.png"/>
                                 <connections>
                                     <segue destination="Cjc-AT-mWC" kind="show" id="CUJ-7x-jBV"/>
                                 </connections>
@@ -594,7 +594,7 @@ José M. Molina Espinosa</string>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hor-dh-RfE">
                                 <rect key="frame" x="16" y="427" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="diseño.png"/>
+                                <state key="normal" title="Button" image="industrial.png"/>
                                 <connections>
                                     <segue destination="Cjc-AT-mWC" kind="show" id="a7N-Cu-6Wm"/>
                                 </connections>
@@ -602,7 +602,7 @@ José M. Molina Espinosa</string>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Qq-ii-Cc5">
                                 <rect key="frame" x="199" y="427" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="diseño.png"/>
+                                <state key="normal" title="Button" image="comunicación.png"/>
                                 <connections>
                                     <segue destination="Cjc-AT-mWC" kind="show" id="1ta-GW-7J8"/>
                                 </connections>
@@ -889,7 +889,7 @@ José M. Molina Espinosa</string>
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ldv-A7-gZg" kind="show" id="Gms-5v-TNw"/>
+                                    <segue destination="Vcl-My-GKs" kind="show" id="Qdz-Gk-CCI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odx-9R-XN8">
@@ -988,7 +988,60 @@ José M. Molina Espinosa</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnX-f0-v5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4464.8000000000002" y="-967.4662668665668"/>
+            <point key="canvasLocation" x="4407" y="-1388"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7Zx-rv-dZN">
+            <objects>
+                <viewController id="Vcl-My-GKs" customClass="ARViewController" customModule="VRCedetec" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ur2-06-lT8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSe-On-FlP">
+                                <rect key="frame" x="0.0" y="54" width="375" height="613"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UK-qL-VIo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                <color key="backgroundColor" red="0.0018155298890000001" green="0.1173228994" blue="0.41901028159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="x2Z-B6-heb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="22"/>
+                                <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Regresar" image="back.png">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="GoBack:" destination="Vcl-My-GKs" eventType="touchUpInside" id="Al0-Qd-CED"/>
+                                    <action selector="GoBack:" destination="k9A-2n-QXP" eventType="touchUpInside" id="Sib-IN-i4G"/>
+                                    <action selector="GoBack:" destination="oUq-u3-ZYr" eventType="touchUpInside" id="jNO-Ry-Ak6"/>
+                                    <action selector="ReturnToMain:" destination="hbd-id-HZH" eventType="touchUpInside" id="Ez8-Wp-uNz"/>
+                                    <action selector="ReturnToMain:" destination="AlM-lv-ljg" eventType="touchUpInside" id="LFi-dw-f64"/>
+                                    <action selector="ReturnToMain:" destination="aoZ-8i-7pD" eventType="touchUpInside" id="dqB-xX-aJa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6UK-qL-VIo" firstAttribute="top" secondItem="Ur2-06-lT8" secondAttribute="top" id="8YB-7z-xN5"/>
+                            <constraint firstItem="OSe-On-FlP" firstAttribute="bottom" secondItem="9Ml-1V-IcD" secondAttribute="bottom" id="Wft-V5-muh"/>
+                            <constraint firstAttribute="trailing" secondItem="6UK-qL-VIo" secondAttribute="trailing" id="irH-0f-nvp"/>
+                            <constraint firstItem="6UK-qL-VIo" firstAttribute="trailing" secondItem="OSe-On-FlP" secondAttribute="trailing" id="sKY-zJ-Fxl"/>
+                            <constraint firstItem="6UK-qL-VIo" firstAttribute="leading" secondItem="Ur2-06-lT8" secondAttribute="leading" id="tYj-MJ-NC8"/>
+                            <constraint firstItem="OSe-On-FlP" firstAttribute="top" secondItem="9Ml-1V-IcD" secondAttribute="top" constant="34" id="voA-1R-7D2"/>
+                            <constraint firstItem="6UK-qL-VIo" firstAttribute="leading" secondItem="OSe-On-FlP" secondAttribute="leading" id="yfX-oV-GbH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Ml-1V-IcD"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="OSe-On-FlP" id="Eri-6w-LlQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49h-W4-H8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5344.8000000000002" y="-967.4662668665668"/>
         </scene>
     </scenes>
     <resources>
@@ -999,17 +1052,22 @@ José M. Molina Espinosa</string>
         <image name="PisosBtn.png" width="450" height="459"/>
         <image name="TecLogo.png" width="900" height="900"/>
         <image name="VRCedetecHeader.png" width="2238" height="454"/>
+        <image name="arquitectura.png" width="533" height="538"/>
         <image name="back.png" width="32" height="32"/>
+        <image name="comunicación.png" width="540" height="556"/>
         <image name="diseño.png" width="519" height="531"/>
         <image name="facebook.png" width="64" height="64"/>
+        <image name="industrial.png" width="523" height="527"/>
         <image name="information.png" width="32" height="32"/>
         <image name="mapIcon.png" width="32" height="32"/>
+        <image name="mecanica.png" width="516" height="524"/>
         <image name="pin.png" width="32" height="32"/>
         <image name="placeholderIcon.png" width="32" height="32"/>
         <image name="placeholderSettings.png" width="32" height="32"/>
         <image name="search.png" width="32" height="32"/>
         <image name="settings.png" width="32" height="32"/>
         <image name="speaker.png" width="32" height="32"/>
+        <image name="ti.png" width="515" height="528"/>
         <image name="twitter.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -46,6 +46,8 @@
 		CE9A2FB5206D97480018D234 /* comunicación.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9A2FAF206D97450018D234 /* comunicación.png */; };
 		CE9A2FB6206D97480018D234 /* diseño.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9A2FB0206D97460018D234 /* diseño.png */; };
 		CE9A2FB7206D97480018D234 /* ti.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9A2FB1206D97470018D234 /* ti.png */; };
+		CE9D1C5C206DD2D700A1E54F /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D1C5B206DD2D700A1E54F /* ARViewController.swift */; };
+		CE9D1C60206DEDF100A1E54F /* escenes.sncassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9D1C5F206DEDF100A1E54F /* escenes.sncassets */; };
 		CEB4BE70203931E200217A0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BE6F203931E200217A0C /* AppDelegate.swift */; };
 		CEB4BE72203931E200217A0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BE71203931E200217A0C /* ViewController.swift */; };
 		CEB4BE75203931E200217A0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB4BE73203931E200217A0C /* Main.storyboard */; };
@@ -100,6 +102,8 @@
 		CE9A2FAF206D97450018D234 /* comunicación.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "comunicación.png"; sourceTree = "<group>"; };
 		CE9A2FB0206D97460018D234 /* diseño.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "diseño.png"; sourceTree = "<group>"; };
 		CE9A2FB1206D97470018D234 /* ti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ti.png; sourceTree = "<group>"; };
+		CE9D1C5B206DD2D700A1E54F /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		CE9D1C5F206DEDF100A1E54F /* escenes.sncassets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = escenes.sncassets; sourceTree = "<group>"; };
 		CEB4BE6C203931E200217A0C /* VRCedetec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRCedetec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB4BE6F203931E200217A0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB4BE71203931E200217A0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 		CEB4BE6E203931E200217A0C /* VRCedetec */ = {
 			isa = PBXGroup;
 			children = (
+				CE9D1C5F206DEDF100A1E54F /* escenes.sncassets */,
 				CEB4BE85203937DF00217A0C /* assets */,
 				CEB4BE82203936B700217A0C /* fonts */,
 				CEB4BE6F203931E200217A0C /* AppDelegate.swift */,
@@ -165,6 +170,7 @@
 				CE4D85E7203A6BFF00DFC9A1 /* VRViewController.swift */,
 				CE4D85E9203A6F3E00DFC9A1 /* PreviewViewController.swift */,
 				CE6E2B8A203B659F00693AE1 /* AreaViewController.swift */,
+				CE9D1C5B206DD2D700A1E54F /* ARViewController.swift */,
 			);
 			path = VRCedetec;
 			sourceTree = "<group>";
@@ -278,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7503EC2048952800D7E099 /* CEDETECVECTORIZADO.png in Resources */,
+				CE9D1C60206DEDF100A1E54F /* escenes.sncassets in Resources */,
 				CE7503FC2048952800D7E099 /* mapIcon.png in Resources */,
 				CEB4BE7A203931E200217A0C /* LaunchScreen.storyboard in Resources */,
 				CE7503FE2048952800D7E099 /* pin.png in Resources */,
@@ -332,6 +339,7 @@
 				CE6E2B8B203B659F00693AE1 /* AreaViewController.swift in Sources */,
 				CEB4BEA520394AB900217A0C /* MapViewController.swift in Sources */,
 				CEB4BEA920394AF900217A0C /* ExploreViewController.swift in Sources */,
+				CE9D1C5C206DD2D700A1E54F /* ARViewController.swift in Sources */,
 				CEB4BE8B20393CB600217A0C /* DesignableButton.swift in Sources */,
 				CE4D85E2203962BF00DFC9A1 /* ExploreFloorsViewController.swift in Sources */,
 				CE4D85E8203A6BFF00DFC9A1 /* VRViewController.swift in Sources */,
