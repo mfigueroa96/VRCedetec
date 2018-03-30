@@ -10,22 +10,19 @@ import UIKit
 
 class ExploreFloorsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    var classrooms = [Classroom]()
+    
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var floorSegmentedControl: UISegmentedControl!
     
-    var mainFloor = [""];
-    
-    var firstFloor = ["Taller de mecánica", "Sala de computación"],
-        secondFloor = ["Salón 2D", "Sala de Audio Digital", "Multimedia"],
-        thirdFloor = ["Salón de Multimedia 2"],
-        fourthFloor = ["Taller de maderas", "Arquitectura"];
+    var mainFloor = [Classroom]();
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1;
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return mainFloor[row];
+        return mainFloor[row].name;
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -33,21 +30,15 @@ class ExploreFloorsViewController: UIViewController, UIPickerViewDataSource, UIP
     }
     
     @IBAction func OnFloorChange(_ sender: Any) {
-        switch floorSegmentedControl.selectedSegmentIndex
+        mainFloor.removeAll();
+        let origin = floorSegmentedControl.selectedSegmentIndex;
+        for room in classrooms
         {
-            case 0:
-                mainFloor = firstFloor;
-                break;
-            case 1:
-                mainFloor = secondFloor;
-                break;
-            case 2:
-                mainFloor = thirdFloor;
-                break;
-            case 3:
-                mainFloor = fourthFloor;
-                break;
-            default: break;
+            let floor = Int(room.floor.replacingOccurrences(of: "F-", with: ""));
+            if (floor! - 1 == origin)
+            {
+                mainFloor.append(room)
+            }
         }
         
         self.pickerView.reloadAllComponents();
@@ -55,7 +46,15 @@ class ExploreFloorsViewController: UIViewController, UIPickerViewDataSource, UIP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainFloor = firstFloor;
+        mainFloor.removeAll();
+        for room in classrooms
+        {
+            let floor = Int(room.floor.replacingOccurrences(of: "F-", with: ""));
+            if (floor! - 1 == 0)
+            {
+                mainFloor.append(room)
+            }
+        }
         self.pickerView.reloadAllComponents();
     }
 
@@ -74,9 +73,6 @@ class ExploreFloorsViewController: UIViewController, UIPickerViewDataSource, UIP
 //     In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let next = segue.destination as! PreviewViewController
-        next.room = mainFloor[pickerView.selectedRow(inComponent: 0)];
-        next.floor = floorSegmentedControl.selectedSegmentIndex + 1;
-//         Get the new view controller using segue.destinationViewController.
-//         Pass the selected object to the new view controller.
+        next.room = mainFloor[pickerView.selectedRow(inComponent: 0)]
     }
 }

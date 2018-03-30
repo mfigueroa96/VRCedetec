@@ -10,9 +10,11 @@ import UIKit
 
 class ExploreAreasViewController: UIViewController {
 
+    var classrooms = [Classroom]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -25,14 +27,18 @@ class ExploreAreasViewController: UIViewController {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let button = sender as! UIButton
+        
+        let next = segue.destination as! AreaViewController
+        for room in classrooms {
+            if (room.depts.contains("0" + String(button.tag)))
+            {
+                next.classrooms.append(room)
+            }
+        }
     }
-    */
-
 }

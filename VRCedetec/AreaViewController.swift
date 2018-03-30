@@ -8,12 +8,27 @@
 
 import UIKit
 
+struct Classroom : Decodable
+{
+    let id : String
+    let num : String
+    let name : String
+    let depts : String
+    let details : String
+    let tags : String
+    let imgs : String
+    let floor : String
+    let contact : String
+    let description : String
+}
+
 class AreaViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var classrooms = [Classroom]()
     
     @IBOutlet weak var roomsView: UITableView!
     
-    var mainRooms = ["Taller de mecánica", "Taller de termodinámica"];
-    var floorSpecs = ["Primer piso", "Segundo piso"];
+    var floorSpecs = ["Primer piso", "Segundo piso", "Tercer piso", "Cuarto piso"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +38,14 @@ class AreaViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mainRooms.count
+        return classrooms.count
     }
     
     var index = 0;
@@ -38,8 +53,10 @@ class AreaViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = roomsView.dequeueReusableCell(withIdentifier: "cell")
         index = indexPath.row;
-        cell?.textLabel?.text = mainRooms[indexPath.row];
-        cell?.detailTextLabel?.text = floorSpecs[indexPath.row];
+        cell?.textLabel?.text = classrooms[indexPath.row].name;
+        let floorNum : Int = Int(classrooms[indexPath.row].floor.replacingOccurrences(of: "F-", with: ""))!
+        cell?.detailTextLabel?.text = floorSpecs[floorNum - 1]
+        cell?.tag = indexPath.row
         return cell!;
     }
     
@@ -53,17 +70,15 @@ class AreaViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func GoBack(_ sender: Any) {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let next = segue.destination as! PreviewViewController
+        let cell = sender as! UITableViewCell
+        next.room = classrooms[cell.tag];
     }
-    */
+    
 
 }

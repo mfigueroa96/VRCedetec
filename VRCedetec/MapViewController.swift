@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import WebKit
 
 class MapViewController: UIViewController {
 
+    @IBOutlet weak var mapView: WKWebView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let myURL = URL(string: "https://www.google.com/maps/place/ITESM+Mexico+City/@19.2834308,-99.1373627,17z/data=!3m1!4b1!4m5!3m4!1s0x85ce01059b077ca1:0x129534395a02e72a!8m2!3d19.2834308!4d-99.135174")
+        let myRequest = URLRequest(url: myURL!)
+        mapView.load(myRequest)
         // Do any additional setup after loading the view.
     }
 

@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kb-ai-lrV">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kb-ai-lrV">
                                 <rect key="frame" x="0.0" y="107" width="375" height="49"/>
                                 <color key="backgroundColor" red="0.002272644080221653" green="0.11350046843290329" blue="0.4110511839389801" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -39,7 +39,7 @@
                                     <segue destination="hbd-id-HZH" kind="show" id="9bU-re-oF8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0a-tY-ImZ">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0a-tY-ImZ">
                                 <rect key="frame" x="0.0" y="164" width="375" height="49"/>
                                 <color key="backgroundColor" red="0.0029969543684273958" green="0.17014086246490479" blue="0.59830456972122192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -54,7 +54,7 @@
                                     <segue destination="LJT-z3-bc2" kind="show" id="Slc-gb-eT6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMy-8A-Euv">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMy-8A-Euv">
                                 <rect key="frame" x="0.0" y="221" width="375" height="49"/>
                                 <color key="backgroundColor" red="0.00227264408" green="0.1135004684" blue="0.41105118390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
@@ -70,7 +70,7 @@
                                     <segue destination="aoZ-8i-7pD" kind="show" id="cjA-VY-PTH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3l-eF-bTc">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3l-eF-bTc">
                                 <rect key="frame" x="0.0" y="278" width="375" height="49"/>
                                 <color key="backgroundColor" red="0.0029969543679999999" green="0.17014086249999999" blue="0.59830456970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -94,7 +94,7 @@
                                     <constraint firstAttribute="height" constant="64" id="pt3-nD-sgb"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGp-ed-aCB" customClass="DesignableButton" customModule="VRCedetec" customModuleProvider="target">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGp-ed-aCB" customClass="DesignableButton" customModule="VRCedetec" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="335" width="375" height="46"/>
                                 <color key="backgroundColor" red="0.00227264408" green="0.1135004684" blue="0.41105118390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -233,22 +233,30 @@
                                     <action selector="ReturnToMain:" destination="AlM-lv-ljg" eventType="touchUpInside" id="ggB-SK-UqK"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoogleMaps.png" translatesAutoresizingMaskIntoConstraints="NO" id="n8t-6e-AVk">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHe-pB-Pe5">
                                 <rect key="frame" x="0.0" y="57" width="375" height="610"/>
-                            </imageView>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="CTl-CR-Jw2" firstAttribute="trailing" secondItem="n8t-6e-AVk" secondAttribute="trailing" id="Dsi-er-Ptf"/>
+                            <constraint firstItem="JHe-pB-Pe5" firstAttribute="trailing" secondItem="CTl-CR-Jw2" secondAttribute="trailing" id="Im5-u1-3SR"/>
+                            <constraint firstItem="JHe-pB-Pe5" firstAttribute="leading" secondItem="CTl-CR-Jw2" secondAttribute="leading" id="OmP-gM-YY0"/>
                             <constraint firstItem="CTl-CR-Jw2" firstAttribute="leading" secondItem="2OK-hP-KfW" secondAttribute="leading" id="TVU-cb-amb"/>
-                            <constraint firstItem="n8t-6e-AVk" firstAttribute="bottom" secondItem="GbG-Kk-Emv" secondAttribute="bottom" id="djl-B5-fx5"/>
+                            <constraint firstItem="JHe-pB-Pe5" firstAttribute="top" secondItem="CTl-CR-Jw2" secondAttribute="bottom" id="VjW-Xe-hSP"/>
                             <constraint firstAttribute="trailing" secondItem="CTl-CR-Jw2" secondAttribute="trailing" id="fxI-of-J9t"/>
-                            <constraint firstItem="n8t-6e-AVk" firstAttribute="top" secondItem="CTl-CR-Jw2" secondAttribute="bottom" id="nVn-Wl-WlJ"/>
-                            <constraint firstItem="CTl-CR-Jw2" firstAttribute="leading" secondItem="n8t-6e-AVk" secondAttribute="leading" id="t9u-gv-E9S"/>
+                            <constraint firstItem="JHe-pB-Pe5" firstAttribute="bottom" secondItem="GbG-Kk-Emv" secondAttribute="bottom" id="g5B-8x-qeS"/>
                             <constraint firstItem="CTl-CR-Jw2" firstAttribute="top" secondItem="2OK-hP-KfW" secondAttribute="top" id="y5I-Th-4B1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GbG-Kk-Emv"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="JHe-pB-Pe5" id="afU-C1-dAx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZn-we-3Bt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -486,7 +494,7 @@ José M. Molina Espinosa</string>
                                     <action selector="ReturnToMain:" destination="aoZ-8i-7pD" eventType="touchUpInside" id="uBm-Vh-52q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWf-EZ-GyP">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWf-EZ-GyP">
                                 <rect key="frame" x="67" y="97" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="l6b-vP-0E1"/>
@@ -496,7 +504,7 @@ José M. Molina Espinosa</string>
                                     <segue destination="k9A-2n-QXP" kind="show" id="s9V-8Q-fFe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JY-Ba-CCv">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JY-Ba-CCv">
                                 <rect key="frame" x="67" y="379" width="240" height="240"/>
                                 <state key="normal" backgroundImage="AreaBtn.png"/>
                                 <connections>
@@ -551,12 +559,52 @@ José M. Molina Espinosa</string>
                                     <action selector="ReturnToMain:" destination="hbd-id-HZH" eventType="touchUpInside" id="g7O-5n-Ief"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHt-rA-HLD">
-                                <rect key="frame" x="16" y="91" width="343" height="537"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C97-GX-g6u">
+                                <rect key="frame" x="16" y="79" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Areas.png"/>
+                                <state key="normal" title="Button" image="diseño.png"/>
                                 <connections>
-                                    <segue destination="Cjc-AT-mWC" kind="show" id="40S-3f-SO7"/>
+                                    <segue destination="Cjc-AT-mWC" kind="show" id="csa-xP-2Ek"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVO-KC-EKX">
+                                <rect key="frame" x="199" y="79" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="diseño.png"/>
+                                <connections>
+                                    <segue destination="Cjc-AT-mWC" kind="show" id="vAa-Mz-wBY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KT0-bB-KKa">
+                                <rect key="frame" x="16" y="253" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="diseño.png"/>
+                                <connections>
+                                    <segue destination="Cjc-AT-mWC" kind="show" id="B6d-wd-5ud"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xH8-Qb-R8W">
+                                <rect key="frame" x="199" y="253" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="diseño.png"/>
+                                <connections>
+                                    <segue destination="Cjc-AT-mWC" kind="show" id="CUJ-7x-jBV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hor-dh-RfE">
+                                <rect key="frame" x="16" y="427" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="diseño.png"/>
+                                <connections>
+                                    <segue destination="Cjc-AT-mWC" kind="show" id="a7N-Cu-6Wm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Qq-ii-Cc5">
+                                <rect key="frame" x="199" y="427" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="diseño.png"/>
+                                <connections>
+                                    <segue destination="Cjc-AT-mWC" kind="show" id="1ta-GW-7J8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -571,7 +619,7 @@ José M. Molina Espinosa</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMz-Ti-XFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768.8" y="-1093.4032983508246"/>
+            <point key="canvasLocation" x="1768.8" y="-1088.0059970014993"/>
         </scene>
         <!--Area View Controller-->
         <scene sceneID="IZ0-0u-4bs">
@@ -606,7 +654,7 @@ José M. Molina Espinosa</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="z2R-fN-Wle" detailTextLabel="MMi-WQ-kRx" style="IBUITableViewCellStyleValue1" id="Q2V-7p-YAG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="z2R-fN-Wle" detailTextLabel="MMi-WQ-kRx" style="IBUITableViewCellStyleSubtitle" id="Q2V-7p-YAG">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q2V-7p-YAG" id="caK-Yr-9g3">
@@ -614,21 +662,24 @@ José M. Molina Espinosa</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z2R-fN-Wle">
-                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MMi-WQ-kRx">
-                                                    <rect key="frame" x="316" y="12" width="44" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MMi-WQ-kRx">
+                                                    <rect key="frame" x="15" y="25.5" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="oUq-u3-ZYr" kind="show" id="VKa-ne-i9O"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -943,14 +994,13 @@ José M. Molina Espinosa</string>
     <resources>
         <image name="360Degrees.png" width="32" height="32"/>
         <image name="AreaBtn.png" width="450" height="456"/>
-        <image name="Areas.png" width="772" height="1176"/>
         <image name="CEDETECVECTORIZADO.png" width="1852" height="777"/>
-        <image name="GoogleMaps.png" width="2150" height="1159"/>
         <image name="LoadScreen.png" width="750" height="1334"/>
         <image name="PisosBtn.png" width="450" height="459"/>
         <image name="TecLogo.png" width="900" height="900"/>
         <image name="VRCedetecHeader.png" width="2238" height="454"/>
         <image name="back.png" width="32" height="32"/>
+        <image name="diseño.png" width="519" height="531"/>
         <image name="facebook.png" width="64" height="64"/>
         <image name="information.png" width="32" height="32"/>
         <image name="mapIcon.png" width="32" height="32"/>
@@ -962,4 +1012,8 @@ José M. Molina Espinosa</string>
         <image name="speaker.png" width="32" height="32"/>
         <image name="twitter.png" width="64" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="An6-f8-ifG"/>
+        <segue reference="B6d-wd-5ud"/>
+    </inferredMetricsTieBreakers>
 </document>

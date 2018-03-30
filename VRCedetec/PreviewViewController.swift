@@ -13,8 +13,7 @@ class PreviewViewController: UIViewController {
     @IBOutlet weak var locationTxt: UITextView!
     @IBOutlet weak var descriptionTxt: UITextView!
 
-    var room: String = "";
-    var floor: Int = 0;
+    var room : Classroom? = nil;
     
     @IBAction func share(_ sender: Any) {
         var textoFijo = "¡Saludos desde CEDETEC!"
@@ -32,14 +31,8 @@ class PreviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        switch floor
-        {
-            case 1:
-                locationTxt.text = room + ", Primer piso";
-            case 2:
-                locationTxt.text = room + ", Segundo piso";
-            default: break
-        }
+        locationTxt.text = (room?.name)! + ", " + (room?.floor)!;
+        descriptionTxt.text = room?.description;
     }
 
     override func didReceiveMemoryWarning() {

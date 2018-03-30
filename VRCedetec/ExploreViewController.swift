@@ -10,6 +10,8 @@ import UIKit
 
 class ExploreViewController: UIViewController {
 
+    var classrooms = [Classroom]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,14 +27,24 @@ class ExploreViewController: UIViewController {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let btn = sender as! UIButton
+        switch (btn.tag)
+        {
+            case 1:
+                let next = segue.destination as! ExploreFloorsViewController
+                next.classrooms = classrooms;
+                break;
+            case 2:
+                let next = segue.destination as! ExploreAreasViewController
+                next.classrooms = classrooms;
+                break;
+        default:
+            print("other")
+        }
     }
-    */
 
 }

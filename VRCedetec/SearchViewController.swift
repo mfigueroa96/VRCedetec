@@ -11,6 +11,8 @@ import UIKit
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var resultLbl: UILabel!
+    var classrooms = [Classroom]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         resultLbl.text = "";
