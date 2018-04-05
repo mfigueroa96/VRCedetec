@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SceneKit
+import SceneKit.ModelIO
 import ARKit
 
 class ARViewController: UIViewController, ARSCNViewDelegate {
@@ -20,8 +22,50 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     var serverHost : String = "http://199.233.252.86/201811/zenith/cube-maps/";
     
+    var scene : SCNScene? = nil;
+    var object3D = SCNNode();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set the view's delegate
+        sceneView.delegate = self
+        
+//         Show statistics such as fps and timing information
+        sceneView.showsStatistics = false
+        
+//         Create a new scene
+//        scene = SCNScene(named: "art.scnassets/vending.scn")!
+        //let node = scene?.rootNode.childNode(withName: "Vending", recursively: false)
+        //convertir las coordenadas del rayo del tap a coordenadas del mundo real
+        //object3D = (node?.childNode(withName: "mesh1848869498", recursively: false))!
+        
+        scene = SCNScene(named: "art.scnassets/imac.scn")!
+        let node = scene?.rootNode.childNode(withName: "imac", recursively: false)
+        object3D = (node?.childNode(withName: "iMac", recursively: false))!
+        
+//        let urlFor = Bundle.main.url(forResource: "art.scnassets/Computer", withExtension: "obj");
+//        let boxAsset = MDLAsset(url: urlFor!);
+//        scene = SCNScene(mdlAsset: boxAsset);
+        
+        
+//        scene = SCNScene(named: "art.scnassets/tortuga.scn")!
+//        object3D = (scene?.rootNode.childNode(withName: "tortuga", recursively: false))!
+        
+//        scene = SCNScene();
+//        let urlTortuga = NSURL(string: "art.scnassets/turtle.obj");
+//        let asset = MDLAsset(url: urlTortuga! as URL);
+//        let object = asset.object(at: 0);
+//        object3D = SCNNode(mdlObject: object)
+//        scene?.rootNode.addChildNode(object3D);
+        
+        let pinchGestureRecognizer = UIPinchGestureRecognizer (target: self, action: #selector(escalado))
+
+        sceneView.addGestureRecognizer(pinchGestureRecognizer)
+        
+//         Set the scene to the view
+        sceneView.scene = scene!
+        
         self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         //indicar la detección del plano
         self.configuration.planeDetection = .horizontal
@@ -46,6 +90,29 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         rightWall = try? Data(contentsOf: url!)
         
     }
+    
+    @objc func escalado(recognizer:UIPinchGestureRecognizer)
+    {
+        print("escalado");
+        object3D.scale = SCNVector3(recognizer.scale, recognizer.scale, recognizer.scale)
+    }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//        // Create a session configuration
+//        let configuration = ARWorldTrackingConfiguration()
+//
+//        // Run the view's session
+//        sceneView.session.run(configuration)
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//
+//        // Pause the view's session
+//        sceneView.session.pause()
+//    }
     
     @objc func tapHandler(sender: UITapGestureRecognizer){
         guard let sceneView = sender.view as? ARSCNView else {return}

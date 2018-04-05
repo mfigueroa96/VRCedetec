@@ -60,6 +60,10 @@
 		CEB4BEA720394AD900217A0C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BEA620394AD900217A0C /* AboutViewController.swift */; };
 		CEB4BEA920394AF900217A0C /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BEA820394AF900217A0C /* ExploreViewController.swift */; };
 		CEB4BEAB20394B8F00217A0C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BEAA20394B8F00217A0C /* SettingsViewController.swift */; };
+		CED335AB20759E9200F0C08C /* imac2.scn in Resources */ = {isa = PBXBuildFile; fileRef = CED335AA20759E9200F0C08C /* imac2.scn */; };
+		CED335AD2075A7EB00F0C08C /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED335AC2075A7EB00F0C08C /* ProjectsViewController.swift */; };
+		CED335AF2075C18E00F0C08C /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED335AE2075C18E00F0C08C /* ProjectDetailsViewController.swift */; };
+		CEFF852320754EA700BE24FC /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFF852220754EA700BE24FC /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +122,10 @@
 		CEB4BEA620394AD900217A0C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		CEB4BEA820394AF900217A0C /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		CEB4BEAA20394B8F00217A0C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CED335AA20759E9200F0C08C /* imac2.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = imac2.scn; path = art.scnassets/imac2.scn; sourceTree = "<group>"; };
+		CED335AC2075A7EB00F0C08C /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		CED335AE2075C18E00F0C08C /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
+		CEFF852220754EA700BE24FC /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +158,7 @@
 		CEB4BE6E203931E200217A0C /* VRCedetec */ = {
 			isa = PBXGroup;
 			children = (
+				CEFF852220754EA700BE24FC /* art.scnassets */,
 				CE9D1C5F206DEDF100A1E54F /* escenes.sncassets */,
 				CEB4BE85203937DF00217A0C /* assets */,
 				CEB4BE82203936B700217A0C /* fonts */,
@@ -171,6 +180,9 @@
 				CE4D85E9203A6F3E00DFC9A1 /* PreviewViewController.swift */,
 				CE6E2B8A203B659F00693AE1 /* AreaViewController.swift */,
 				CE9D1C5B206DD2D700A1E54F /* ARViewController.swift */,
+				CED335AA20759E9200F0C08C /* imac2.scn */,
+				CED335AC2075A7EB00F0C08C /* ProjectsViewController.swift */,
+				CED335AE2075C18E00F0C08C /* ProjectDetailsViewController.swift */,
 			);
 			path = VRCedetec;
 			sourceTree = "<group>";
@@ -300,6 +312,7 @@
 				CE7503E82048952800D7E099 /* View3.png in Resources */,
 				CE7503E52048952800D7E099 /* settings.png in Resources */,
 				CE7503F72048952800D7E099 /* AreaBtn.png in Resources */,
+				CEFF852320754EA700BE24FC /* art.scnassets in Resources */,
 				CE7503F92048952800D7E099 /* twitter.png in Resources */,
 				CEB4BE77203931E200217A0C /* Assets.xcassets in Resources */,
 				CE7503EF2048952800D7E099 /* facebook.png in Resources */,
@@ -319,6 +332,7 @@
 				CE7503F82048952800D7E099 /* back.png in Resources */,
 				CE7503ED2048952800D7E099 /* TecLogo.png in Resources */,
 				CEB4BE84203936C700217A0C /* Lato-Regular.ttf in Resources */,
+				CED335AB20759E9200F0C08C /* imac2.scn in Resources */,
 				CE7503EE2048952800D7E099 /* GoogleMaps.png in Resources */,
 				CE7503FD2048952800D7E099 /* View1.png in Resources */,
 				CE9A2FB6206D97480018D234 /* diseño.png in Resources */,
@@ -338,12 +352,14 @@
 				CEB4BEA320394A9A00217A0C /* SearchViewController.swift in Sources */,
 				CE6E2B8B203B659F00693AE1 /* AreaViewController.swift in Sources */,
 				CEB4BEA520394AB900217A0C /* MapViewController.swift in Sources */,
+				CED335AD2075A7EB00F0C08C /* ProjectsViewController.swift in Sources */,
 				CEB4BEA920394AF900217A0C /* ExploreViewController.swift in Sources */,
 				CE9D1C5C206DD2D700A1E54F /* ARViewController.swift in Sources */,
 				CEB4BE8B20393CB600217A0C /* DesignableButton.swift in Sources */,
 				CE4D85E2203962BF00DFC9A1 /* ExploreFloorsViewController.swift in Sources */,
 				CE4D85E8203A6BFF00DFC9A1 /* VRViewController.swift in Sources */,
 				CE4D85E4203962D000DFC9A1 /* ExploreAreasViewController.swift in Sources */,
+				CED335AF2075C18E00F0C08C /* ProjectDetailsViewController.swift in Sources */,
 				CEB4BEAB20394B8F00217A0C /* SettingsViewController.swift in Sources */,
 				CE4D85EA203A6F3E00DFC9A1 /* PreviewViewController.swift in Sources */,
 			);

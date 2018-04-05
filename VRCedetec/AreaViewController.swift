@@ -8,20 +8,6 @@
 
 import UIKit
 
-struct Classroom : Decodable
-{
-    let id : String
-    let num : String
-    let name : String
-    let depts : String
-    let details : String
-    let tags : String
-    let imgs : String
-    let floor : String
-    let contact : String
-    let description : String
-}
-
 class AreaViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var classrooms = [Classroom]()
