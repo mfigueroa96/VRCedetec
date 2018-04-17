@@ -63,6 +63,7 @@
 		CED335AB20759E9200F0C08C /* imac2.scn in Resources */ = {isa = PBXBuildFile; fileRef = CED335AA20759E9200F0C08C /* imac2.scn */; };
 		CED335AD2075A7EB00F0C08C /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED335AC2075A7EB00F0C08C /* ProjectsViewController.swift */; };
 		CED335AF2075C18E00F0C08C /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED335AE2075C18E00F0C08C /* ProjectDetailsViewController.swift */; };
+		CEEAC1B42076B2EC0030B5DA /* project.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEAC1B32076B2EB0030B5DA /* project.png */; };
 		CEFF852320754EA700BE24FC /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFF852220754EA700BE24FC /* art.scnassets */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,7 @@
 		CED335AA20759E9200F0C08C /* imac2.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = imac2.scn; path = art.scnassets/imac2.scn; sourceTree = "<group>"; };
 		CED335AC2075A7EB00F0C08C /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		CED335AE2075C18E00F0C08C /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
+		CEEAC1B32076B2EB0030B5DA /* project.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = project.png; sourceTree = "<group>"; };
 		CEFF852220754EA700BE24FC /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 		CEB4BE85203937DF00217A0C /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				CEEAC1B32076B2EB0030B5DA /* project.png */,
 				CE9A2FAE206D97440018D234 /* arquitectura.png */,
 				CE9A2FAF206D97450018D234 /* comunicación.png */,
 				CE9A2FB0206D97460018D234 /* diseño.png */,
@@ -308,6 +311,7 @@
 				CE7503E62048952800D7E099 /* speaker.png in Resources */,
 				CE9A2FB7206D97480018D234 /* ti.png in Resources */,
 				CE7503F32048952800D7E099 /* information.png in Resources */,
+				CEEAC1B42076B2EC0030B5DA /* project.png in Resources */,
 				CE7503EB2048952800D7E099 /* magnifier.png in Resources */,
 				CE7503E82048952800D7E099 /* View3.png in Resources */,
 				CE7503E52048952800D7E099 /* settings.png in Resources */,

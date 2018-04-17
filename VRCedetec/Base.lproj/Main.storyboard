@@ -95,7 +95,7 @@
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="11" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Proyectos" image="search.png"/>
+                                <state key="normal" title="Proyectos" image="project.png"/>
                                 <connections>
                                     <segue destination="OwJ-m5-svp" kind="show" id="M2P-j5-dcE"/>
                                 </connections>
@@ -1168,6 +1168,18 @@ José M. Molina Espinosa</string>
                                     <action selector="ReturnToMain:" destination="aoZ-8i-7pD" eventType="touchUpInside" id="dqB-xX-aJa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPe-Sv-bbZ">
+                                <rect key="frame" x="188" y="601" width="171" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0029969543679999999" green="0.17014086249999999" blue="0.59830456970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Agregar video">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addVideo:" destination="Vcl-My-GKs" eventType="touchUpInside" id="42g-Jq-giW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1210,6 +1222,7 @@ José M. Molina Espinosa</string>
         <image name="pin.png" width="32" height="32"/>
         <image name="placeholderIcon.png" width="32" height="32"/>
         <image name="placeholderSettings.png" width="32" height="32"/>
+        <image name="project.png" width="32" height="32"/>
         <image name="search.png" width="32" height="32"/>
         <image name="settings.png" width="32" height="32"/>
         <image name="speaker.png" width="32" height="32"/>
