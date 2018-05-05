@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../VRCedetec/Resnet50.mlmodel">
+   </FileRef>
+   <FileRef
       location = "self:VRCedetec.xcodeproj">
    </FileRef>
 </Workspace>

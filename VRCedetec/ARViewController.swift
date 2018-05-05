@@ -10,20 +10,98 @@ import UIKit
 import SceneKit
 import SceneKit.ModelIO
 import ARKit
+import Vision
 
 class ARViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet weak var sceneView: ARSCNView!
     let configuration = ARWorldTrackingConfiguration()
     
+    // ML
+//    private var hitTestResult: ARHitTestResult!
+//    private var resnetModel = Resnet50()
+//    private var visionRequests = [VNRequest]()
+    
     var classroom : Classroom? = nil;
     var leftWall : Data? = nil, rightWall : Data? = nil, ceiling : Data? = nil,
-        floor : Data? = nil, frontWall : Data? = nil, backWall : Data? = nil;
+    floor : Data? = nil, frontWall : Data? = nil, backWall : Data? = nil;
     
     var serverHost : String = "http://199.233.252.86/201811/zenith/cube-maps/";
     
     var scene : SCNScene? = nil;
     var object3D = SCNNode();
+    
+    @IBAction func tapEjecutado(_ sender: UITapGestureRecognizer) {
+//        //obtener la vista donde se va a trabajar
+//        let vista = sender.view as! ARSCNView
+//        //ubicar el toque en el centro de la vista
+//        let ubicacionToque = self.sceneView.center
+//        //obtener la imagen actual
+//        guard let currentFrame = vista.session.currentFrame else {return}
+//        //obtener los nodos que fueron tocados por el rayo
+//        let hitTestResults = vista.hitTest(ubicacionToque, types: .featurePoint)
+//
+//        if (hitTestResults .isEmpty){
+//            //no se toco nada
+//            return}
+//        guard let hitTestResult = hitTestResults.first else{
+//            return
+//
+//        }
+//        //obtener la imagen capturada en formato de buffer de pixeles
+//        let imagenPixeles = currentFrame.capturedImage
+//        self.hitTestResult = hitTestResult
+//        performVisionRequest(pixelBuffer: imagenPixeles)
+    }
+    
+    private func performVisionRequest(pixelBuffer: CVPixelBuffer)
+    {
+//        //inicializar el modelo de ML al modelo usado, en este caso resnet
+//        let visionModel = try! VNCoreMLModel(for: resnetModel.model)
+//        let request = VNCoreMLRequest(model: visionModel) { request, error in
+//
+//            if error != nil {
+//                //hubo un error
+//                return}
+//            guard let observations = request.results else {
+//                //no hubo resultados por parte del modelo
+//                return
+//
+//            }
+//            //obtener el mejor resultado
+//            let observation = observations.first as! VNClassificationObservation
+//
+//            print("Nombre \(observation.identifier) confianza \(observation.confidence)")
+//            self.desplegarTexto(entrada: observation.identifier)
+//
+//        }
+//        //la imagen que se pasará al modelo sera recortada para quedarse con el centro
+//        request.imageCropAndScaleOption = .centerCrop
+//        self.visionRequests = [request]
+//
+//        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .upMirrored, options: [:])
+//        DispatchQueue.global().async {
+//            try! imageRequestHandler.perform(self.visionRequests)
+//
+//        }
+        
+    }
+    
+    private func desplegarTexto(entrada: String)
+    {
+        
+//        let letrero = SCNText(string: entrada
+//            , extrusionDepth: 0)
+//        letrero.alignmentMode = kCAAlignmentCenter
+//        letrero.firstMaterial?.diffuse.contents = UIColor.blue
+//        letrero.firstMaterial?.specular.contents = UIColor.white
+//        letrero.firstMaterial?.isDoubleSided = true
+//        letrero.font = UIFont(name: "Futura", size: 0.20)
+//        let nodo = SCNNode(geometry: letrero)
+//        nodo.position = SCNVector3(self.hitTestResult.worldTransform.columns.3.x,self.hitTestResult.worldTransform.columns.3.y-0.2,self.hitTestResult.worldTransform.columns.3.z )
+//        nodo.scale = SCNVector3Make(0.2, 0.2, 0.2)
+//        self.sceneView.scene.rootNode.addChildNode(nodo)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,38 +109,38 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         // Set the view's delegate
         sceneView.delegate = self
         
-//         Show statistics such as fps and timing information
+        //         Show statistics such as fps and timing information
         sceneView.showsStatistics = false
         
-//         Create a new scene
+        //         Create a new scene
         scene = SCNScene(named: "art.scnassets/vending.scn")!
         let node = scene?.rootNode.childNode(withName: "Vending", recursively: false)
         object3D = (node?.childNode(withName: "mesh1848869498", recursively: false))!
         
-//        scene = SCNScene(named: "art.scnassets/imac.scn")!
-//        let node = scene?.rootNode.childNode(withName: "imac", recursively: false)
-//        object3D = (node?.childNode(withName: "iMac", recursively: false))!
+        //        scene = SCNScene(named: "art.scnassets/imac.scn")!
+        //        let node = scene?.rootNode.childNode(withName: "imac", recursively: false)
+        //        object3D = (node?.childNode(withName: "iMac", recursively: false))!
         
-//        let urlFor = Bundle.main.url(forResource: "art.scnassets/Computer", withExtension: "obj");
-//        let boxAsset = MDLAsset(url: urlFor!);
-//        scene = SCNScene(mdlAsset: boxAsset);
+        //        let urlFor = Bundle.main.url(forResource: "art.scnassets/Computer", withExtension: "obj");
+        //        let boxAsset = MDLAsset(url: urlFor!);
+        //        scene = SCNScene(mdlAsset: boxAsset);
         
         
-//        scene = SCNScene(named: "art.scnassets/tortuga.scn")!
-//        object3D = (scene?.rootNode.childNode(withName: "tortuga", recursively: false))!
+        //        scene = SCNScene(named: "art.scnassets/tortuga.scn")!
+        //        object3D = (scene?.rootNode.childNode(withName: "tortuga", recursively: false))!
         
-//        scene = SCNScene();
-//        let urlTortuga = NSURL(string: "art.scnassets/turtle.obj");
-//        let asset = MDLAsset(url: urlTortuga! as URL);
-//        let object = asset.object(at: 0);
-//        object3D = SCNNode(mdlObject: object)
-//        scene?.rootNode.addChildNode(object3D);
+        //        scene = SCNScene();
+        //        let urlTortuga = NSURL(string: "art.scnassets/turtle.obj");
+        //        let asset = MDLAsset(url: urlTortuga! as URL);
+        //        let object = asset.object(at: 0);
+        //        object3D = SCNNode(mdlObject: object)
+        //        scene?.rootNode.addChildNode(object3D);
         
         let pinchGestureRecognizer = UIPinchGestureRecognizer (target: self, action: #selector(escalado))
-
+        
         sceneView.addGestureRecognizer(pinchGestureRecognizer)
         
-//         Set the scene to the view
+        //         Set the scene to the view
         sceneView.scene = scene!
         
         self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
@@ -90,8 +168,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         
     }
     
-    @objc func escalado(recognizer:UIPinchGestureRecognizer)
-    {
+    @objc func escalado(recognizer:UIPinchGestureRecognizer) {
         print("escalado");
         object3D.scale = SCNVector3(recognizer.scale, recognizer.scale, recognizer.scale)
     }
@@ -105,7 +182,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
 //        // Run the view's session
 //        sceneView.session.run(configuration)
 //    }
-//
+////
 //    override func viewWillDisappear(_ animated: Bool) {
 //        super.viewWillDisappear(animated)
 //
@@ -133,7 +210,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         let portalNode = portalScene?.rootNode.childNode(withName: "Portal", recursively: false)
         //convertir las coordenadas del rayo del tap a coordenadas del mundo real
         let box = portalNode?.childNode(withName: "box", recursively: false)
-
+        
         box?.geometry?.material(named: "back-wall")?.diffuse.contents = UIImage(data: backWall!)
         box?.geometry?.material(named: "green-wall")?.diffuse.contents = UIImage(data: frontWall!)
         box?.geometry?.material(named: "ceiling-wall")?.diffuse.contents = UIImage(data: ceiling!)
@@ -160,12 +237,12 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         guard anchor is ARPlaneAnchor else {return} //se agrego un plano
         //ejecución asincrona en donde se modifica la etiqueta de plano detectado
         DispatchQueue.main.async {
-//            self.planeDetected.isHidden = false
+            //            self.planeDetected.isHidden = false
             print("Plano detectado")
         }
         //espera 3 segundos antes de desaparecer
         DispatchQueue.main.asyncAfter(deadline: .now()+3) {
-//            self.planeDetected.isHidden = true
+            //            self.planeDetected.isHidden = true
             
         }
     }

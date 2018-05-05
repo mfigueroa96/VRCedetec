@@ -48,6 +48,7 @@
 		CE9A2FB7206D97480018D234 /* ti.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9A2FB1206D97470018D234 /* ti.png */; };
 		CE9D1C5C206DD2D700A1E54F /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D1C5B206DD2D700A1E54F /* ARViewController.swift */; };
 		CE9D1C60206DEDF100A1E54F /* escenes.sncassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9D1C5F206DEDF100A1E54F /* escenes.sncassets */; };
+		CEA41A99209E487900585FB8 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CEA41A98209E487900585FB8 /* Resnet50.mlmodel */; };
 		CEB4BE70203931E200217A0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BE6F203931E200217A0C /* AppDelegate.swift */; };
 		CEB4BE72203931E200217A0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4BE71203931E200217A0C /* ViewController.swift */; };
 		CEB4BE75203931E200217A0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB4BE73203931E200217A0C /* Main.storyboard */; };
@@ -109,6 +110,7 @@
 		CE9A2FB1206D97470018D234 /* ti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ti.png; sourceTree = "<group>"; };
 		CE9D1C5B206DD2D700A1E54F /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		CE9D1C5F206DEDF100A1E54F /* escenes.sncassets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = escenes.sncassets; sourceTree = "<group>"; };
+		CEA41A98209E487900585FB8 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		CEB4BE6C203931E200217A0C /* VRCedetec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRCedetec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB4BE6F203931E200217A0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB4BE71203931E200217A0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		CEB4BE6E203931E200217A0C /* VRCedetec */ = {
 			isa = PBXGroup;
 			children = (
+				CEA41A98209E487900585FB8 /* Resnet50.mlmodel */,
 				CEFF852220754EA700BE24FC /* art.scnassets */,
 				CE9D1C5F206DEDF100A1E54F /* escenes.sncassets */,
 				CEB4BE85203937DF00217A0C /* assets */,
@@ -356,6 +359,7 @@
 				CEB4BEA320394A9A00217A0C /* SearchViewController.swift in Sources */,
 				CE6E2B8B203B659F00693AE1 /* AreaViewController.swift in Sources */,
 				CEB4BEA520394AB900217A0C /* MapViewController.swift in Sources */,
+				CEA41A99209E487900585FB8 /* Resnet50.mlmodel in Sources */,
 				CED335AD2075A7EB00F0C08C /* ProjectsViewController.swift in Sources */,
 				CEB4BEA920394AF900217A0C /* ExploreViewController.swift in Sources */,
 				CE9D1C5C206DD2D700A1E54F /* ARViewController.swift in Sources */,
