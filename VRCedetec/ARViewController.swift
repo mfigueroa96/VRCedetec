@@ -16,12 +16,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet weak var sceneView: ARSCNView!
     let configuration = ARWorldTrackingConfiguration()
-    
-    // ML
-//    private var hitTestResult: ARHitTestResult!
-//    private var resnetModel = Resnet50()
-//    private var visionRequests = [VNRequest]()
-    
+
     var classroom : Classroom? = nil;
     var leftWall : Data? = nil, rightWall : Data? = nil, ceiling : Data? = nil,
     floor : Data? = nil, frontWall : Data? = nil, backWall : Data? = nil;
@@ -31,77 +26,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     var scene : SCNScene? = nil;
     var object3D = SCNNode();
     
-    @IBAction func tapEjecutado(_ sender: UITapGestureRecognizer) {
-//        //obtener la vista donde se va a trabajar
-//        let vista = sender.view as! ARSCNView
-//        //ubicar el toque en el centro de la vista
-//        let ubicacionToque = self.sceneView.center
-//        //obtener la imagen actual
-//        guard let currentFrame = vista.session.currentFrame else {return}
-//        //obtener los nodos que fueron tocados por el rayo
-//        let hitTestResults = vista.hitTest(ubicacionToque, types: .featurePoint)
-//
-//        if (hitTestResults .isEmpty){
-//            //no se toco nada
-//            return}
-//        guard let hitTestResult = hitTestResults.first else{
-//            return
-//
-//        }
-//        //obtener la imagen capturada en formato de buffer de pixeles
-//        let imagenPixeles = currentFrame.capturedImage
-//        self.hitTestResult = hitTestResult
-//        performVisionRequest(pixelBuffer: imagenPixeles)
-    }
-    
-    private func performVisionRequest(pixelBuffer: CVPixelBuffer)
-    {
-//        //inicializar el modelo de ML al modelo usado, en este caso resnet
-//        let visionModel = try! VNCoreMLModel(for: resnetModel.model)
-//        let request = VNCoreMLRequest(model: visionModel) { request, error in
-//
-//            if error != nil {
-//                //hubo un error
-//                return}
-//            guard let observations = request.results else {
-//                //no hubo resultados por parte del modelo
-//                return
-//
-//            }
-//            //obtener el mejor resultado
-//            let observation = observations.first as! VNClassificationObservation
-//
-//            print("Nombre \(observation.identifier) confianza \(observation.confidence)")
-//            self.desplegarTexto(entrada: observation.identifier)
-//
-//        }
-//        //la imagen que se pasará al modelo sera recortada para quedarse con el centro
-//        request.imageCropAndScaleOption = .centerCrop
-//        self.visionRequests = [request]
-//
-//        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .upMirrored, options: [:])
-//        DispatchQueue.global().async {
-//            try! imageRequestHandler.perform(self.visionRequests)
-//
-//        }
-        
-    }
-    
-    private func desplegarTexto(entrada: String)
-    {
-        
-//        let letrero = SCNText(string: entrada
-//            , extrusionDepth: 0)
-//        letrero.alignmentMode = kCAAlignmentCenter
-//        letrero.firstMaterial?.diffuse.contents = UIColor.blue
-//        letrero.firstMaterial?.specular.contents = UIColor.white
-//        letrero.firstMaterial?.isDoubleSided = true
-//        letrero.font = UIFont(name: "Futura", size: 0.20)
-//        let nodo = SCNNode(geometry: letrero)
-//        nodo.position = SCNVector3(self.hitTestResult.worldTransform.columns.3.x,self.hitTestResult.worldTransform.columns.3.y-0.2,self.hitTestResult.worldTransform.columns.3.z )
-//        nodo.scale = SCNVector3Make(0.2, 0.2, 0.2)
-//        self.sceneView.scene.rootNode.addChildNode(nodo)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -173,22 +97,22 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         object3D.scale = SCNVector3(recognizer.scale, recognizer.scale, recognizer.scale)
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Create a session configuration
+        let configuration = ARWorldTrackingConfiguration()
+
+        // Run the view's session
+        sceneView.session.run(configuration)
+    }
 //
-//        // Create a session configuration
-//        let configuration = ARWorldTrackingConfiguration()
-//
-//        // Run the view's session
-//        sceneView.session.run(configuration)
-//    }
-////
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//
-//        // Pause the view's session
-//        sceneView.session.pause()
-//    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Pause the view's session
+        sceneView.session.pause()
+    }
     
     @objc func tapHandler(sender: UITapGestureRecognizer){
         guard let sceneView = sender.view as? ARSCNView else {return}

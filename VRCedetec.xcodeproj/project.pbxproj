@@ -40,6 +40,7 @@
 		CE7503FE2048952800D7E099 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503E22048952500D7E099 /* pin.png */; };
 		CE7503FF2048952800D7E099 /* VRCedetecHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503E32048952600D7E099 /* VRCedetecHeader.png */; };
 		CE7504002048952800D7E099 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503E42048952700D7E099 /* search.png */; };
+		CE8AFE19209E59B300E1651B /* MLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8AFE18209E59B300E1651B /* MLViewController.swift */; };
 		CE9A2FB2206D97480018D234 /* mecanica.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9A2FAC206D97420018D234 /* mecanica.png */; };
 		CE9A2FB3206D97480018D234 /* industrial.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9A2FAD206D97430018D234 /* industrial.png */; };
 		CE9A2FB4206D97480018D234 /* arquitectura.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9A2FAE206D97440018D234 /* arquitectura.png */; };
@@ -102,6 +103,7 @@
 		CE7503E22048952500D7E099 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		CE7503E32048952600D7E099 /* VRCedetecHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VRCedetecHeader.png; sourceTree = "<group>"; };
 		CE7503E42048952700D7E099 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		CE8AFE18209E59B300E1651B /* MLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLViewController.swift; sourceTree = "<group>"; };
 		CE9A2FAC206D97420018D234 /* mecanica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mecanica.png; sourceTree = "<group>"; };
 		CE9A2FAD206D97430018D234 /* industrial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = industrial.png; sourceTree = "<group>"; };
 		CE9A2FAE206D97440018D234 /* arquitectura.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arquitectura.png; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				CED335AA20759E9200F0C08C /* imac2.scn */,
 				CED335AC2075A7EB00F0C08C /* ProjectsViewController.swift */,
 				CED335AE2075C18E00F0C08C /* ProjectDetailsViewController.swift */,
+				CE8AFE18209E59B300E1651B /* MLViewController.swift */,
 			);
 			path = VRCedetec;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				CE4D85E8203A6BFF00DFC9A1 /* VRViewController.swift in Sources */,
 				CE4D85E4203962D000DFC9A1 /* ExploreAreasViewController.swift in Sources */,
 				CED335AF2075C18E00F0C08C /* ProjectDetailsViewController.swift in Sources */,
+				CE8AFE19209E59B300E1651B /* MLViewController.swift in Sources */,
 				CEB4BEAB20394B8F00217A0C /* SettingsViewController.swift in Sources */,
 				CE4D85EA203A6F3E00DFC9A1 /* PreviewViewController.swift in Sources */,
 			);
