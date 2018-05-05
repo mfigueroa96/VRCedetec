@@ -41,6 +41,7 @@
 		CE7503FF2048952800D7E099 /* VRCedetecHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503E32048952600D7E099 /* VRCedetecHeader.png */; };
 		CE7504002048952800D7E099 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503E42048952700D7E099 /* search.png */; };
 		CE8AFE19209E59B300E1651B /* MLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8AFE18209E59B300E1651B /* MLViewController.swift */; };
+		CE8AFE1B209E61C800E1651B /* Comp_and_Floppy.dae in Resources */ = {isa = PBXBuildFile; fileRef = CE8AFE1A209E61C800E1651B /* Comp_and_Floppy.dae */; };
 		CE9A2FB2206D97480018D234 /* mecanica.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9A2FAC206D97420018D234 /* mecanica.png */; };
 		CE9A2FB3206D97480018D234 /* industrial.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9A2FAD206D97430018D234 /* industrial.png */; };
 		CE9A2FB4206D97480018D234 /* arquitectura.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9A2FAE206D97440018D234 /* arquitectura.png */; };
@@ -104,6 +105,7 @@
 		CE7503E32048952600D7E099 /* VRCedetecHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VRCedetecHeader.png; sourceTree = "<group>"; };
 		CE7503E42048952700D7E099 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		CE8AFE18209E59B300E1651B /* MLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLViewController.swift; sourceTree = "<group>"; };
+		CE8AFE1A209E61C800E1651B /* Comp_and_Floppy.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Comp_and_Floppy.dae; path = art.scnassets/Comp_and_Floppy.dae; sourceTree = "<group>"; };
 		CE9A2FAC206D97420018D234 /* mecanica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mecanica.png; sourceTree = "<group>"; };
 		CE9A2FAD206D97430018D234 /* industrial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = industrial.png; sourceTree = "<group>"; };
 		CE9A2FAE206D97440018D234 /* arquitectura.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arquitectura.png; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		CEB4BE6E203931E200217A0C /* VRCedetec */ = {
 			isa = PBXGroup;
 			children = (
+				CE8AFE1A209E61C800E1651B /* Comp_and_Floppy.dae */,
 				CEA41A98209E487900585FB8 /* Resnet50.mlmodel */,
 				CEFF852220754EA700BE24FC /* art.scnassets */,
 				CE9D1C5F206DEDF100A1E54F /* escenes.sncassets */,
@@ -333,6 +336,7 @@
 				CE7503FA2048952800D7E099 /* PisosBtn.png in Resources */,
 				CE7503F62048952800D7E099 /* 360Degrees.png in Resources */,
 				CE7503E92048952800D7E099 /* placeholderSettings.png in Resources */,
+				CE8AFE1B209E61C800E1651B /* Comp_and_Floppy.dae in Resources */,
 				CE7503FB2048952800D7E099 /* LoadScreen.png in Resources */,
 				CEB4BE75203931E200217A0C /* Main.storyboard in Resources */,
 				CE7503FF2048952800D7E099 /* VRCedetecHeader.png in Resources */,

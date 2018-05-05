@@ -37,13 +37,15 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = false
         
         //         Create a new scene
-        scene = SCNScene(named: "art.scnassets/vending.scn")!
-        let node = scene?.rootNode.childNode(withName: "Vending", recursively: false)
-        object3D = (node?.childNode(withName: "mesh1848869498", recursively: false))!
+//        scene = SCNScene(named: "art.scnassets/vending.scn")!
+//        let node = scene?.rootNode.childNode(withName: "Vending", recursively: false)
+//        object3D = (node?.childNode(withName: "mesh1848869498", recursively: false))!
         
-        //        scene = SCNScene(named: "art.scnassets/imac.scn")!
-        //        let node = scene?.rootNode.childNode(withName: "imac", recursively: false)
-        //        object3D = (node?.childNode(withName: "iMac", recursively: false))!
+        let urlO = URL(string: "http://199.233.252.86/201811/zenith/scns/oldComputer.scn")
+        scene = try? SCNScene(url: urlO!, options: nil)
+//        scene = SCNScene(named: "art.scnassets/oldComputer.scn")!
+        let node = scene?.rootNode.childNode(withName: "container", recursively: false)
+        object3D = (node?.childNode(withName: "Comp", recursively: false))!
         
         //        let urlFor = Bundle.main.url(forResource: "art.scnassets/Computer", withExtension: "obj");
         //        let boxAsset = MDLAsset(url: urlFor!);
