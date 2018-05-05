@@ -12,7 +12,9 @@ class PreviewViewController: UIViewController {
 
     @IBOutlet weak var locationTxt: UITextView!
     @IBOutlet weak var descriptionTxt: UITextView!
+    @IBOutlet weak var processInd: UIActivityIndicatorView!
 
+    
     var room : Classroom? = nil;
     
     @IBAction func share(_ sender: Any) {
@@ -31,6 +33,8 @@ class PreviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        processInd.isHidden = true
+        
         locationTxt.text = (room?.name)! + ", " + (room?.floor)!;
         descriptionTxt.text = room?.description;
     }
@@ -44,14 +48,35 @@ class PreviewViewController: UIViewController {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
+    var timer = Timer()
+    
+    @IBAction func exploreBtn(_ sender: Any) {
+        processInd.isHidden = false;
+        processInd.startAnimating()
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerAction), userInfo: nil, repeats: true)
+    }
+    
+    var counter = 0;
+    @objc func TimerAction()
+    {
+        let siguienteVista = self.storyboard?.instantiateViewController(withIdentifier: "ARView") as! ARViewController
+        siguienteVista.classroom = room;
+        self.present(siguienteVista, animated: true, completion: nil)
+        timer.invalidate()
+        processInd.stopAnimating()
+        processInd.isHidden = true
+    }
+    
+    
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let next = segue.destination as! ARViewController;
-        next.classroom = room;
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let next = segue.destination as! ARViewController;
+//        next.classroom = room;
+//    }
     
 
 }

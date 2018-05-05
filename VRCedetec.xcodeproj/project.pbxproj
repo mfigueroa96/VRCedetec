@@ -40,6 +40,7 @@
 		CE7503FE2048952800D7E099 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503E22048952500D7E099 /* pin.png */; };
 		CE7503FF2048952800D7E099 /* VRCedetecHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503E32048952600D7E099 /* VRCedetecHeader.png */; };
 		CE7504002048952800D7E099 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7503E42048952700D7E099 /* search.png */; };
+		CE864312209E74940016A882 /* load.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE864311209E74940016A882 /* load.gif */; };
 		CE8AFE19209E59B300E1651B /* MLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8AFE18209E59B300E1651B /* MLViewController.swift */; };
 		CE8AFE1B209E61C800E1651B /* Comp_and_Floppy.dae in Resources */ = {isa = PBXBuildFile; fileRef = CE8AFE1A209E61C800E1651B /* Comp_and_Floppy.dae */; };
 		CE9A2FB2206D97480018D234 /* mecanica.png in Resources */ = {isa = PBXBuildFile; fileRef = CE9A2FAC206D97420018D234 /* mecanica.png */; };
@@ -104,6 +105,7 @@
 		CE7503E22048952500D7E099 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		CE7503E32048952600D7E099 /* VRCedetecHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VRCedetecHeader.png; sourceTree = "<group>"; };
 		CE7503E42048952700D7E099 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		CE864311209E74940016A882 /* load.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = load.gif; sourceTree = "<group>"; };
 		CE8AFE18209E59B300E1651B /* MLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLViewController.swift; sourceTree = "<group>"; };
 		CE8AFE1A209E61C800E1651B /* Comp_and_Floppy.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; name = Comp_and_Floppy.dae; path = art.scnassets/Comp_and_Floppy.dae; sourceTree = "<group>"; };
 		CE9A2FAC206D97420018D234 /* mecanica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mecanica.png; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		CEB4BE85203937DF00217A0C /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				CE864311209E74940016A882 /* load.gif */,
 				CEEAC1B32076B2EB0030B5DA /* project.png */,
 				CE9A2FAE206D97440018D234 /* arquitectura.png */,
 				CE9A2FAF206D97450018D234 /* comunicación.png */,
@@ -339,6 +342,7 @@
 				CE8AFE1B209E61C800E1651B /* Comp_and_Floppy.dae in Resources */,
 				CE7503FB2048952800D7E099 /* LoadScreen.png in Resources */,
 				CEB4BE75203931E200217A0C /* Main.storyboard in Resources */,
+				CE864312209E74940016A882 /* load.gif in Resources */,
 				CE7503FF2048952800D7E099 /* VRCedetecHeader.png in Resources */,
 				CE9A2FB3206D97480018D234 /* industrial.png in Resources */,
 				CE9A2FB2206D97480018D234 /* mecanica.png in Resources */,
