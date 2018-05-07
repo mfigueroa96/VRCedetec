@@ -39,6 +39,13 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
 
             classObjects.append(classObj)
         }
+        
+        var url = URL(string: "http://199.233.252.86/201811/zenith/scns/" + classObjects[0].url + ".scn")
+        objectOne = try? SCNScene(url: url!, options: nil)
+        url = URL(string: "http://199.233.252.86/201811/zenith/scns/" + classObjects[1].url + ".scn")
+        objectTwo = try? SCNScene(url: url!, options: nil)
+        url = URL(string: "http://199.233.252.86/201811/zenith/scns/" + classObjects[2].url + ".scn")
+        objectThree = try? SCNScene(url: url!, options: nil)
 
         addObjectOne.setTitle("Agregar " + classObjects[0].name, for: .normal)
         addObjectTwo.setTitle("Agregar " + classObjects[1].name, for: .normal)
@@ -93,7 +100,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         //administrador de gestos para identificar el tap sobre el plano horizontal
         // Do any additional setup after loading the view.
         
-        var url = URL(string: serverHost + (classroom?.num)! + "/nx.png")
+        url = URL(string: serverHost + (classroom?.num)! + "/nx.png")
         backWall = try? Data(contentsOf: url!)
         url = URL(string: serverHost + (classroom?.num)! + "/px.png")
         frontWall = try? Data(contentsOf: url!)
@@ -146,15 +153,17 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet weak var addObjectOne: UIButton!
     
+    var objectOne : SCNScene? = nil
+    var objectTwo : SCNScene? = nil
+    var objectThree : SCNScene? = nil
+    
     @IBAction func addObjectOneClick(_ sender: Any) {
         if (addObjectOne.tag == 0) {
-            let urlO = URL(string: "http://199.233.252.86/201811/zenith/scns/" + classObjects[0].url + ".scn")
-            scene = try? SCNScene(url: urlO!, options: nil)
-            //        scene = SCNScene(named: "art.scnassets/oldComputer.scn")!
-            let node = scene?.rootNode.childNode(withName: "container", recursively: false)
-            object3D = (node?.childNode(withName: "Comp", recursively: false))!
-            node?.name = "obj1"
-            sceneView.scene.rootNode.addChildNode(node!)
+            let node = objectOne?.rootNode.childNode(withName: "container", recursively: false)
+            let newNode = node?.clone()
+            newNode?.name = "obj1"
+            object3D = (newNode?.childNode(withName: "Comp", recursively: false))!
+            sceneView.scene.rootNode.addChildNode(newNode!)
             addObjectOne.tag = 1
             addObjectOne.setTitle("Quitar " + classObjects[0].name, for: .normal)
         }
@@ -169,13 +178,12 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     @IBAction func addObjectTwoClick(_ sender: Any) {
         if (addObjectTwo.tag == 0) {
-            let urlO = URL(string: "http://199.233.252.86/201811/zenith/scns/" + classObjects[1].url + ".scn")
-            scene = try? SCNScene(url: urlO!, options: nil)
-            //        scene = SCNScene(named: "art.scnassets/oldComputer.scn")!
-            let node = scene?.rootNode.childNode(withName: "container", recursively: false)
+            let node = objectTwo?.rootNode.childNode(withName: "container", recursively: false)
             object3D = (node?.childNode(withName: "Comp", recursively: false))!
-            node?.name = "obj2"
-            sceneView.scene.rootNode.addChildNode(node!)
+            let newNode = node?.clone()
+            newNode?.name = "obj2"
+            object3D = (newNode?.childNode(withName: "Comp", recursively: false))!
+            sceneView.scene.rootNode.addChildNode(newNode!)
             addObjectTwo.tag = 1
             addObjectTwo.setTitle("Quitar " + classObjects[1].name, for: .normal)
         }
@@ -190,18 +198,17 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     @IBAction func addObjectThreeClick(_ sender: Any) {
         if (addObjectThree.tag == 0) {
-            let urlO = URL(string: "http://199.233.252.86/201811/zenith/scns/" + classObjects[2].url + ".scn")
-            scene = try? SCNScene(url: urlO!, options: nil)
-            //        scene = SCNScene(named: "art.scnassets/oldComputer.scn")!
-            let node = scene?.rootNode.childNode(withName: "container", recursively: false)
+            let node = objectThree?.rootNode.childNode(withName: "container", recursively: false)
             object3D = (node?.childNode(withName: "Comp", recursively: false))!
-            node?.name = "obj3"
-            sceneView.scene.rootNode.addChildNode(node!)
+            let newNode = node?.clone()
+            newNode?.name = "obj3"
+            object3D = (newNode?.childNode(withName: "Comp", recursively: false))!
+            sceneView.scene.rootNode.addChildNode(newNode!)
             addObjectThree.tag = 1
             addObjectThree.setTitle("Quitar " + classObjects[2].name, for: .normal)
         }
         else {
-            sceneView.scene.rootNode.childNode(withName: "obj1", recursively: false)?.removeFromParentNode()
+            sceneView.scene.rootNode.childNode(withName: "obj3", recursively: false)?.removeFromParentNode()
             addObjectThree.tag = 0
             addObjectThree.setTitle("Agregar " + classObjects[2].name, for: .normal)
         }
