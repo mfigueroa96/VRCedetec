@@ -276,7 +276,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             //let path = Bundle.main.path(forResource: "CheeziPuffs", ofType: "mov")
             //let url = URL(fileURLWithPath: path!)
             
-            let moviePath = "http://199.233.252.86/201811/zenith/media/CheeziPuffs.mov"
+            let moviePath = "http://199.233.252.86/201811/zenith/media/" + (classroom?.num)! + ".mp4"
             let url = URL(string: moviePath)
             let player = AVPlayer(url: url!)
             player.volume = 0.5

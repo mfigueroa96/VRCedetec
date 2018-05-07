@@ -65,7 +65,7 @@
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="11" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Explorar" image="settings.png"/>
+                                <state key="normal" title="Explorar alrededor" image="explore.png"/>
                                 <connections>
                                     <segue destination="aoZ-8i-7pD" kind="show" id="cjA-VY-PTH"/>
                                 </connections>
@@ -1154,6 +1154,7 @@ José M. Molina Espinosa</string>
         <image name="back.png" width="32" height="32"/>
         <image name="comunicación.png" width="540" height="556"/>
         <image name="diseño.png" width="519" height="531"/>
+        <image name="explore.png" width="32" height="32"/>
         <image name="industrial.png" width="523" height="527"/>
         <image name="information.png" width="32" height="32"/>
         <image name="mapIcon.png" width="32" height="32"/>
@@ -1161,7 +1162,6 @@ José M. Molina Espinosa</string>
         <image name="placeholderIcon.png" width="32" height="32"/>
         <image name="project.png" width="32" height="32"/>
         <image name="search.png" width="32" height="32"/>
-        <image name="settings.png" width="32" height="32"/>
         <image name="ti.png" width="515" height="528"/>
     </resources>
     <inferredMetricsTieBreakers>

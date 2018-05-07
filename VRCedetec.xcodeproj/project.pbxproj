@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3AD836209FEEF1004F2146 /* explore.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3AD835209FEEEF004F2146 /* explore.png */; };
 		CE4D85E2203962BF00DFC9A1 /* ExploreFloorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D85E1203962BF00DFC9A1 /* ExploreFloorsViewController.swift */; };
 		CE4D85E4203962D000DFC9A1 /* ExploreAreasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D85E3203962D000DFC9A1 /* ExploreAreasViewController.swift */; };
 		CE4D85E8203A6BFF00DFC9A1 /* VRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D85E7203A6BFF00DFC9A1 /* VRViewController.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE3AD835209FEEEF004F2146 /* explore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explore.png; sourceTree = "<group>"; };
 		CE4D85E1203962BF00DFC9A1 /* ExploreFloorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFloorsViewController.swift; sourceTree = "<group>"; };
 		CE4D85E3203962D000DFC9A1 /* ExploreAreasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreAreasViewController.swift; sourceTree = "<group>"; };
 		CE4D85E7203A6BFF00DFC9A1 /* VRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		CEB4BE85203937DF00217A0C /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				CE3AD835209FEEEF004F2146 /* explore.png */,
 				CE864311209E74940016A882 /* load.gif */,
 				CEEAC1B32076B2EB0030B5DA /* project.png */,
 				CE9A2FAE206D97440018D234 /* arquitectura.png */,
@@ -334,6 +337,7 @@
 				CE7503F62048952800D7E099 /* 360Degrees.png in Resources */,
 				CE7503E92048952800D7E099 /* placeholderSettings.png in Resources */,
 				CE7503FB2048952800D7E099 /* LoadScreen.png in Resources */,
+				CE3AD836209FEEF1004F2146 /* explore.png in Resources */,
 				CEB4BE75203931E200217A0C /* Main.storyboard in Resources */,
 				CE864312209E74940016A882 /* load.gif in Resources */,
 				CE7503FF2048952800D7E099 /* VRCedetecHeader.png in Resources */,
