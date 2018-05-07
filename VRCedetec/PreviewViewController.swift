@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import WebKit
 
 class PreviewViewController: UIViewController {
 
     @IBOutlet weak var locationTxt: UITextView!
     @IBOutlet weak var descriptionTxt: UITextView!
     @IBOutlet weak var processInd: UIActivityIndicatorView!
-
     
     var room : Classroom? = nil;
     
@@ -51,15 +51,21 @@ class PreviewViewController: UIViewController {
     var timer = Timer()
     
     @IBAction func exploreBtn(_ sender: Any) {
-        processInd.isHidden = false;
-        processInd.startAnimating()
-        
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerAction), userInfo: nil, repeats: true)
+        if (room?.completeData == "_1") {
+            processInd.isHidden = false;
+            processInd.startAnimating()
+            
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerAction), userInfo: nil, repeats: true)
+        }
+        else {
+            let alert = UIAlertController(title: "No disponible", message: "La visita a este salón no está disponible.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
     }
     
     var counter = 0;
-    @objc func TimerAction()
-    {
+    @objc func TimerAction() {
         let siguienteVista = self.storyboard?.instantiateViewController(withIdentifier: "ARView") as! ARViewController
         siguienteVista.classroom = room;
         self.present(siguienteVista, animated: true, completion: nil)
@@ -67,6 +73,14 @@ class PreviewViewController: UIViewController {
         processInd.stopAnimating()
         processInd.isHidden = true
     }
+    
+    @IBAction func sendEmail(_ sender: Any) {
+        let email = "contacto@itesm.mx"
+        if let url = URL(string: "mailto:\(String(describing: email))") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
     
     
     

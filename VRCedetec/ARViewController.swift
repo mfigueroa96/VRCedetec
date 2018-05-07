@@ -21,7 +21,9 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     var leftWall : Data? = nil, rightWall : Data? = nil, ceiling : Data? = nil,
     floor : Data? = nil, frontWall : Data? = nil, backWall : Data? = nil;
     
-    var serverHost : String = "http://199.233.252.86/201811/zenith/cube-maps/";
+    var classObjects = [ClassObject]()
+    
+    var serverHost : String = "http://199.233.252.86/201811/zenith/cubemaps/";
     
     var scene : SCNScene? = nil;
     var object3D = SCNNode();
@@ -29,6 +31,18 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let objs = classroom?.objects.split(separator: "|")
+        for eachObj in objs! {
+            let data = eachObj.split(separator: ":")
+            let classObj = ClassObject(name: String(data[0]), url: String(data[1]))
+
+            classObjects.append(classObj)
+        }
+
+        addObjectOne.setTitle("Agregar " + classObjects[0].name, for: .normal)
+        addObjectTwo.setTitle("Agregar " + classObjects[1].name, for: .normal)
+        addObjectThree.setTitle("Agregar " + classObjects[2].name, for: .normal)
         
         // Set the view's delegate
         sceneView.delegate = self
@@ -41,11 +55,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
 //        let node = scene?.rootNode.childNode(withName: "Vending", recursively: false)
 //        object3D = (node?.childNode(withName: "mesh1848869498", recursively: false))!
         
-        let urlO = URL(string: "http://199.233.252.86/201811/zenith/scns/oldComputer.scn")
-        scene = try? SCNScene(url: urlO!, options: nil)
-//        scene = SCNScene(named: "art.scnassets/oldComputer.scn")!
-        let node = scene?.rootNode.childNode(withName: "container", recursively: false)
-        object3D = (node?.childNode(withName: "Comp", recursively: false))!
+//        let urlO = URL(string: "http://199.233.252.86/201811/zenith/scns/R2D22.scn")
+//        scene = try? SCNScene(url: urlO!, options: nil)
+////        scene = SCNScene(named: "art.scnassets/oldComputer.scn")!
+//        let node = scene?.rootNode.childNode(withName: "container", recursively: false)
+//        object3D = (node?.childNode(withName: "Comp", recursively: false))!
         
         //        let urlFor = Bundle.main.url(forResource: "art.scnassets/Computer", withExtension: "obj");
         //        let boxAsset = MDLAsset(url: urlFor!);
@@ -65,7 +79,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         let pinchGestureRecognizer = UIPinchGestureRecognizer (target: self, action: #selector(escalado))
         
         sceneView.addGestureRecognizer(pinchGestureRecognizer)
-        
+        scene = SCNScene()
         //         Set the scene to the view
         sceneView.scene = scene!
         
@@ -99,16 +113,16 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         object3D.scale = SCNVector3(recognizer.scale, recognizer.scale, recognizer.scale)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
-        sceneView.session.run(configuration)
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
 //
+//        // Create a session configuration
+//        let configuration = ARWorldTrackingConfiguration()
+//
+//        // Run the view's session
+//        sceneView.session.run(configuration)
+//    }
+////
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
@@ -130,8 +144,71 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
-    func addPortal(hitTestResult:ARHitTestResult)
-    {
+    @IBOutlet weak var addObjectOne: UIButton!
+    
+    @IBAction func addObjectOneClick(_ sender: Any) {
+        if (addObjectOne.tag == 0) {
+            let urlO = URL(string: "http://199.233.252.86/201811/zenith/scns/" + classObjects[0].url + ".scn")
+            scene = try? SCNScene(url: urlO!, options: nil)
+            //        scene = SCNScene(named: "art.scnassets/oldComputer.scn")!
+            let node = scene?.rootNode.childNode(withName: "container", recursively: false)
+            object3D = (node?.childNode(withName: "Comp", recursively: false))!
+            node?.name = "obj1"
+            sceneView.scene.rootNode.addChildNode(node!)
+            addObjectOne.tag = 1
+            addObjectOne.setTitle("Quitar " + classObjects[0].name, for: .normal)
+        }
+        else {
+            sceneView.scene.rootNode.childNode(withName: "obj1", recursively: false)?.removeFromParentNode()
+            addObjectOne.tag = 0
+            addObjectOne.setTitle("Agregar " + classObjects[0].name, for: .normal)
+        }
+    }
+    
+    @IBOutlet weak var addObjectTwo: UIButton!
+    
+    @IBAction func addObjectTwoClick(_ sender: Any) {
+        if (addObjectTwo.tag == 0) {
+            let urlO = URL(string: "http://199.233.252.86/201811/zenith/scns/" + classObjects[1].url + ".scn")
+            scene = try? SCNScene(url: urlO!, options: nil)
+            //        scene = SCNScene(named: "art.scnassets/oldComputer.scn")!
+            let node = scene?.rootNode.childNode(withName: "container", recursively: false)
+            object3D = (node?.childNode(withName: "Comp", recursively: false))!
+            node?.name = "obj2"
+            sceneView.scene.rootNode.addChildNode(node!)
+            addObjectTwo.tag = 1
+            addObjectTwo.setTitle("Quitar " + classObjects[1].name, for: .normal)
+        }
+        else {
+            sceneView.scene.rootNode.childNode(withName: "obj2", recursively: false)?.removeFromParentNode()
+            addObjectTwo.tag = 0
+            addObjectTwo.setTitle("Agregar " + classObjects[1].name, for: .normal)
+        }
+    }
+    
+    @IBOutlet weak var addObjectThree: UIButton!
+    
+    @IBAction func addObjectThreeClick(_ sender: Any) {
+        if (addObjectThree.tag == 0) {
+            let urlO = URL(string: "http://199.233.252.86/201811/zenith/scns/" + classObjects[2].url + ".scn")
+            scene = try? SCNScene(url: urlO!, options: nil)
+            //        scene = SCNScene(named: "art.scnassets/oldComputer.scn")!
+            let node = scene?.rootNode.childNode(withName: "container", recursively: false)
+            object3D = (node?.childNode(withName: "Comp", recursively: false))!
+            node?.name = "obj3"
+            sceneView.scene.rootNode.addChildNode(node!)
+            addObjectThree.tag = 1
+            addObjectThree.setTitle("Quitar " + classObjects[2].name, for: .normal)
+        }
+        else {
+            sceneView.scene.rootNode.childNode(withName: "obj1", recursively: false)?.removeFromParentNode()
+            addObjectThree.tag = 0
+            addObjectThree.setTitle("Agregar " + classObjects[2].name, for: .normal)
+        }
+    }
+    
+    
+    func addPortal(hitTestResult:ARHitTestResult) {
         let portalScene = SCNScene(named:"escenes.sncassets/Portal.scn")
         let portalNode = portalScene?.rootNode.childNode(withName: "Portal", recursively: false)
         //convertir las coordenadas del rayo del tap a coordenadas del mundo real
@@ -181,50 +258,67 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     Here we will try to add a video on the scene, if the proyects stops working, please delete all form below
     */
     
+    var videoNode : SKVideoNode? = nil;
+    
+    @IBOutlet weak var addVideoBtn: UIButton!
+    
+    
     @IBAction func addVideo(_ sender: Any) {
-        guard let currentFrame = self.sceneView.session.currentFrame else {return}
-        
-        //let path = Bundle.main.path(forResource: "CheeziPuffs", ofType: "mov")
-        //let url = URL(fileURLWithPath: path!)
-        
-        let moviePath = "http://199.233.252.86/201811/zenith/CheeziPuffs.mov"
-        let url = URL(string: moviePath)
-        let player = AVPlayer(url: url!)
-        player.volume = 0.5
-        print(player.isMuted)
-        
-        // crear un nodo capaz de reporducir un video
-        let videoNodo = SKVideoNode(url: url!)
-        //let videoNodo = SKVideoNode(fileNamed: "CheeziPuffs.mov")
-        //let videoNodo = SKVideoNode(avPlayer: player)
-        videoNodo.play() //ejecutar play al momento de presentarse
-        
-        //crear una escena sprite kit, los parametros estan en pixeles
-        let spriteKitEscene =  SKScene(size: CGSize(width: 640, height: 480))
-        spriteKitEscene.addChild(videoNodo)
-        
-        //colocar el videoNodo en el centro de la escena tipo SpriteKit
-        videoNodo.position = CGPoint(x: spriteKitEscene.size.width/2, y: spriteKitEscene.size.height/2)
-        videoNodo.size = spriteKitEscene.size
-        
-        //crear una pantalla 4/3, los parametros son metros
-        let pantalla = SCNPlane(width: 1.0, height: 0.75)
-        
-        //pantalla.firstMaterial?.diffuse.contents = UIColor.blue
-        //modificar el material del plano
-        pantalla.firstMaterial?.diffuse.contents = spriteKitEscene
-        //permitir ver el video por ambos lados
-        pantalla.firstMaterial?.isDoubleSided = true
-        
-        let pantallaPlanaNodo = SCNNode(geometry: pantalla)
-        //identificar en donde se ha tocado el currentFrame
-        var traduccion = matrix_identity_float4x4
-        //definir un metro alejado del dispositivo
-        traduccion.columns.3.z = -1.0
-        pantallaPlanaNodo.simdTransform = matrix_multiply(currentFrame.camera.transform, traduccion)
-        
-        pantallaPlanaNodo.eulerAngles = SCNVector3(Double.pi, 0, 0)
-        self.sceneView.scene.rootNode.addChildNode(pantallaPlanaNodo)
+        if (addVideoBtn.tag == 1) {
+            sceneView.scene.rootNode.childNode(withName: "VIDEO", recursively: false)?.removeFromParentNode()
+            addVideoBtn.tag = 0;
+            videoNode?.pause()
+            addVideoBtn.setTitle("Agregar video", for: .normal)
+        }
+        else {
+            guard let currentFrame = self.sceneView.session.currentFrame else {return}
+            
+            //let path = Bundle.main.path(forResource: "CheeziPuffs", ofType: "mov")
+            //let url = URL(fileURLWithPath: path!)
+            
+            let moviePath = "http://199.233.252.86/201811/zenith/media/CheeziPuffs.mov"
+            let url = URL(string: moviePath)
+            let player = AVPlayer(url: url!)
+            player.volume = 0.5
+            print(player.isMuted)
+            
+            // crear un nodo capaz de reporducir un video
+            videoNode = SKVideoNode(url: url!)
+            //let videoNodo = SKVideoNode(fileNamed: "CheeziPuffs.mov")
+            //let videoNodo = SKVideoNode(avPlayer: player)
+            videoNode?.play() //ejecutar play al momento de presentarse
+            
+            //crear una escena sprite kit, los parametros estan en pixeles
+            let spriteKitEscene =  SKScene(size: CGSize(width: 640, height: 480))
+            spriteKitEscene.addChild((videoNode)!)
+            
+            //colocar el videoNodo en el centro de la escena tipo SpriteKit
+            videoNode?.position = CGPoint(x: spriteKitEscene.size.width/2, y: spriteKitEscene.size.height/2)
+            videoNode?.size = spriteKitEscene.size
+            
+            //crear una pantalla 4/3, los parametros son metros
+            let pantalla = SCNPlane(width: 1.0, height: 0.75)
+            
+            //pantalla.firstMaterial?.diffuse.contents = UIColor.blue
+            //modificar el material del plano
+            pantalla.firstMaterial?.diffuse.contents = spriteKitEscene
+            //permitir ver el video por ambos lados
+            pantalla.firstMaterial?.isDoubleSided = true
+            
+            let pantallaPlanaNodo = SCNNode(geometry: pantalla)
+            //identificar en donde se ha tocado el currentFrame
+            var traduccion = matrix_identity_float4x4
+            //definir un metro alejado del dispositivo
+            traduccion.columns.3.z = -1.0
+            pantallaPlanaNodo.simdTransform = matrix_multiply(currentFrame.camera.transform, traduccion)
+            
+            pantallaPlanaNodo.eulerAngles = SCNVector3(Double.pi, 0, 0)
+            pantallaPlanaNodo.name = "VIDEO"
+            self.sceneView.scene.rootNode.addChildNode(pantallaPlanaNodo)
+            
+            addVideoBtn.tag = 1;
+            addVideoBtn.setTitle("Quitar video", for: .normal)
+        }
     }
     
     //Until here

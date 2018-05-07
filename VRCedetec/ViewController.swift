@@ -11,15 +11,15 @@ import UIKit
 struct Classroom : Decodable
 {
     let id : String
+    let completeData : String
     let num : String
     let name : String
     let depts : String
-    let details : String
     let tags : String
-    let imgs : String
     let floor : String
     let contact : String
     let description : String
+    let objects : String
 }
 
 struct User : Decodable
@@ -36,6 +36,17 @@ struct Project : Decodable
     let userId : String
 }
 
+struct ClassObject
+{
+    var name : String
+    var url : String
+    
+    init(name nameA : String, url urlA : String) {
+        name = nameA
+        url = urlA
+    }
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var aboutBtn: DesignableButton!
@@ -44,13 +55,12 @@ class ViewController: UIViewController {
         
     }
     
-    let jsonAddress = "http://199.233.252.86/201811/zenith/"
     var classrooms = [Classroom]()
     var users = [User]()
     
     func LoadData()
     {
-        let url = URL(string: "http://199.233.252.86/201811/zenith/cedetec.classrooms.json")
+        let url = URL(string: "http://199.233.252.86/201811/zenith/data/cedetec.classrooms.json")
         URLSession.shared.dataTask(with: url!) {
             (data, response, error) in
                 do
@@ -70,14 +80,14 @@ class ViewController: UIViewController {
                 }
         }.resume()
         
-        let url2 = URL(string: "http://199.233.252.86/201811/zenith/cedetec.users.json")
+        let url2 = URL(string: "http://199.233.252.86/201811/zenith/data/cedetec.users.json")
         URLSession.shared.dataTask(with: url2!) {
             (data, response, error) in
                 do
                 {
-                    print("Imma here")
+//                    print("Imma here")
                     let users = try JSONDecoder().decode([User].self, from: data!)
-                    print("Nowimmahere")
+//                    print("Nowimmahere")
                     for eachUser in users {
                         self.users.append(eachUser);
                         print(eachUser.userId);

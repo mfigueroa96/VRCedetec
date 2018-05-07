@@ -54,7 +54,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         else {
             inSearchMode = true
             for classroom in classrooms {
-                if (classroom.name.contains(searchText) || classroom.tags.contains(searchText) || classroom.num == searchText) {
+                if (classroom.name.lowercased().contains(searchText.lowercased()) || classroom.tags.lowercased().contains(searchText.lowercased()) || classroom.num == searchText) {
                     filteredData.append(classroom)
                 }
             }

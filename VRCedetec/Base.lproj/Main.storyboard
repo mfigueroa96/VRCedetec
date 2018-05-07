@@ -232,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fS-y6-KAn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2700" y="1029.5352323838081"/>
+            <point key="canvasLocation" x="1382" y="965"/>
         </scene>
         <!--Project Details View Controller-->
         <scene sceneID="slv-Lp-6Cf">
@@ -261,10 +261,9 @@
                                     <action selector="ReturnToMain:" destination="AlM-lv-ljg" eventType="touchUpInside" id="tSr-o6-91p"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AIs-gf-e2I">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="[Project]" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AIs-gf-e2I">
                                 <rect key="frame" x="16" y="81" width="343" height="505"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -287,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XoQ-Ca-wAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3725.5999999999999" y="1029.5352323838081"/>
+            <point key="canvasLocation" x="2374" y="965"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="vL9-cC-kOR">
@@ -370,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vrZ-Yi-rkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-786" y="965"/>
+            <point key="canvasLocation" x="1020" y="-14"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="XVk-3H-Qwb">
@@ -419,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZn-we-3Bt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="964.76761619190415"/>
+            <point key="canvasLocation" x="-138" y="965"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hv6-zq-2eq">
@@ -473,7 +472,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1912.8" y="98.50074962518741"/>
+            <point key="canvasLocation" x="-943" y="965"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="O9Q-lf-9RD">
@@ -542,7 +541,7 @@ José M. Molina Espinosa</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0TJ-Fk-WZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="965"/>
+            <point key="canvasLocation" x="598" y="965"/>
         </scene>
         <!--Explore View Controller-->
         <scene sceneID="dmD-S0-eBV">
@@ -605,7 +604,7 @@ José M. Molina Espinosa</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGl-Qr-ENN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="-400.74962518740631"/>
+            <point key="canvasLocation" x="1020" y="-1133"/>
         </scene>
         <!--Explore Areas View Controller-->
         <scene sceneID="wIX-qF-BEm">
@@ -693,7 +692,7 @@ José M. Molina Espinosa</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMz-Ti-XFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768.8" y="-1088.0059970014993"/>
+            <point key="canvasLocation" x="1769" y="-1442"/>
         </scene>
         <!--Area View Controller-->
         <scene sceneID="IZ0-0u-4bs">
@@ -871,7 +870,7 @@ José M. Molina Espinosa</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2do-Fb-t33" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2700" y="-646.32683658170924"/>
+            <point key="canvasLocation" x="1769" y="-782"/>
         </scene>
         <!--Preview View Controller-->
         <scene sceneID="eMM-Zd-PpO">
@@ -974,6 +973,9 @@ José M. Molina Espinosa</string>
                                 <state key="normal" title="Enviar correo al responsable">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendEmail:" destination="oUq-u3-ZYr" eventType="touchUpInside" id="kRn-O8-ZIq"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmF-3T-d6U">
                                 <rect key="frame" x="310" y="6" width="57" height="44"/>
@@ -1033,7 +1035,7 @@ José M. Molina Espinosa</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obJ-1O-qBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3576.8000000000002" y="-966.56671664167925"/>
+            <point key="canvasLocation" x="2700" y="-15.742128935532236"/>
         </scene>
         <!--ARView-->
         <scene sceneID="7Zx-rv-dZN">
@@ -1087,7 +1089,7 @@ José M. Molina Espinosa</string>
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="addVideo:" destination="Vcl-My-GKs" eventType="touchUpInside" id="GpY-7x-k9u"/>
+                                    <action selector="addObjectTwoClick:" destination="Vcl-My-GKs" eventType="touchUpInside" id="dKM-NQ-gJ3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qno-oD-hhk">
@@ -1095,11 +1097,11 @@ José M. Molina Espinosa</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0029969543679999999" green="0.17014086249999999" blue="0.59830456970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal">
+                                <state key="normal" title="Agregar coso">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="addVideo:" destination="Vcl-My-GKs" eventType="touchUpInside" id="mpV-Uh-feG"/>
+                                    <action selector="addObjectOneClick:" destination="Vcl-My-GKs" eventType="touchUpInside" id="PA5-Lq-f0c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19v-FQ-p2m">
@@ -1111,7 +1113,7 @@ José M. Molina Espinosa</string>
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="addVideo:" destination="Vcl-My-GKs" eventType="touchUpInside" id="rtM-l5-Tvw"/>
+                                    <action selector="addObjectThreeClick:" destination="Vcl-My-GKs" eventType="touchUpInside" id="G91-wL-vyU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1128,13 +1130,17 @@ José M. Molina Espinosa</string>
                         <viewLayoutGuide key="safeArea" id="9Ml-1V-IcD"/>
                     </view>
                     <connections>
+                        <outlet property="addObjectOne" destination="qno-oD-hhk" id="C5i-yk-ftk"/>
+                        <outlet property="addObjectThree" destination="19v-FQ-p2m" id="Bd1-gx-XWg"/>
+                        <outlet property="addObjectTwo" destination="IKe-c5-aP0" id="dKt-HZ-wWo"/>
+                        <outlet property="addVideoBtn" destination="HPe-Sv-bbZ" id="x9i-nb-GPM"/>
                         <outlet property="sceneView" destination="OSe-On-FlP" id="Pnu-Tj-Mh0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49h-W4-H8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Rcq-hl-eG8"/>
             </objects>
-            <point key="canvasLocation" x="4532" y="-967"/>
+            <point key="canvasLocation" x="3444" y="-15"/>
         </scene>
     </scenes>
     <resources>
@@ -1159,7 +1165,7 @@ José M. Molina Espinosa</string>
         <image name="ti.png" width="515" height="528"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gOU-5H-DS7"/>
+        <segue reference="An6-f8-ifG"/>
         <segue reference="B6d-wd-5ud"/>
     </inferredMetricsTieBreakers>
 </document>
